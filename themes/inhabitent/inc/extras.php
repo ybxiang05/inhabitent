@@ -26,7 +26,7 @@ function inhabitent_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
             background-image: url(
-				"<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-tent.svg");
+				"<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg");
 		height:65px;
 		width:320px;
 		background-size: 320px 65px;
