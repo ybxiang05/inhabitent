@@ -47,55 +47,90 @@
 // .bypostauthor {
 //   display: block;
 // }
+.blog {
+  .site-content {
+    display: flex;
+    width: 1120px;
+    margin: 0 auto;
 
-.site-content {
+    .content-area {
+      width: 73%;
+      // border-right: 1px solid #e1e1e1;
+      padding-top: 3rem;
+      padding-right: 3rem;
+
+      .entry-header {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .entry-title {
+          position: absolute;
+          top: 20px;
+          left: 0;
+          background: #248a83;
+          padding: 10px;
+          text-transform: uppercase;
+          font-size: 2rem;
+          & a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+              color: #f0e4d1;
+            }
+          }
+        }
+        .entry-meta {
+          position: absolute;
+          bottom: 7px;
+          right: 0;
+          color: white;
+          background: #248a83;
+          padding: 5px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .widget-area {
+      width: 27%;
+      border-left: 1px solid #e1e1e1;
+    }
+  }
+}
+
+.journal-title {
   display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+}
+.journal-content {
+  display: grid;
+  gap: $base__space-unit;
+  grid-template-columns: 33% 33% 33%;
+  margin: 0 4rem;
   width: 1120px;
-  margin: 0 auto;
+  .home-page-journal {
+    border: 1px solid gray;
+    display: flex;
+    flex-flow: column nowrap;
+    // width: 33%;
 
-  .content-area {
-    width: 73%;
-    border-right: 1px solid #e1e1e1;
-    padding-top: 3rem;
-    padding-right: 3rem;
-
-    .entry-header {
-      position: relative;
-      overflow: hidden;
-
-      img {
+    .home-page-journal-image {
+      & img {
         width: 100%;
         height: auto;
       }
-
-      .entry-title {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        background: #248a83;
-        padding: 10px;
-        text-transform: uppercase;
-        font-size: 2rem;
-        & a {
-          color: white;
-          text-decoration: none;
-          &:hover {
-            color: #f0e4d1;
-          }
-        }
-      }
-      .entry-meta {
-        position: absolute;
-        bottom: 7px;
-        right: 0;
-        color: white;
-        background: #248a83;
-        padding: 5px;
-        text-transform: uppercase;
-      }
     }
   }
-  .widget-area {
-    width: 27%;
-  }
+}
+
+.page-about .entry-header {
+  display: none;
 }

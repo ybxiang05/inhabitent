@@ -23,20 +23,41 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<!-- .site-branding -->
-
+				
 				<nav id="site-navigation" class="main-navigation" role="navigation" style="background: ">
 					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //echo esc_html( 'Main Navigation' ); ?></button> -->
 
-					<a href='http://localhost:3000/Inhabitent/wordpress/'><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg" height="35px" alt="Inhabitent tent logo"/>
+					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+						<?php if(is_front_page() || is_page('About')):?>
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent-white.svg" height="35px" alt="Inhabitent tent logo"/>
+							<?php else:?>
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg" height="35px" alt="Inhabitent tent logo"/>
+			<?php endif;?>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary',
 					'menu' => 'primary-menu',
 					'menu_class' => 'menu nav-menu' ) ); ?>
 					<?php get_search_form();?>
+					
 
 					
 				</nav><!-- #site-navigation -->
-				<?php include('banner.php');?>
+				
+
+				
+
 
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
+
+			
+			<?php 
+				if(is_front_page() || is_page('About')):
+				if ( has_post_thumbnail() ) : ?>
+				<section class="hero-banner">
+					<?php the_post_thumbnail( 'large', ['class' => 'hero-banner-image'] ); ?>
+					<h2 class="hero-banner-title"><?php echo get_the_title(); ?></h2>
+				</section>
+					<?php endif;
+					
+				endif;	?>

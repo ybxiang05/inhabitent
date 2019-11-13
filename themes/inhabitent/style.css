@@ -297,8 +297,40 @@ ins {
 big {
   font-size: 125%; }
 
-.site-header img {
+.home,
+.page-about {
   width: 100%; }
+  .home .site-header,
+  .page-about .site-header {
+    position: relative;
+    width: 100%; }
+    .home .site-header .main-navigation,
+    .page-about .site-header .main-navigation {
+      position: absolute;
+      z-index: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; }
+
+.hero-banner {
+  position: relative;
+  height: 100vh; }
+  .hero-banner .wp-post-image {
+    width: 100%;
+    height: auto;
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%); }
+  .hero-banner .hero-banner-title {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -347,9 +379,10 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 0.5px solid #e1e1e1;
   -ms-flex-line-pack: center;
-      align-content: center; }
+      align-content: center;
+  background-color: none;
+  width: 100%; }
   .main-navigation .menu-toggle {
     display: none; }
   .main-navigation .nav-menu {
@@ -363,9 +396,21 @@ textarea {
     .main-navigation .nav-menu .menu-item a {
       margin-right: 15px;
       text-decoration: none;
-      color: #248a83; }
+      color: #248a83;
+      text-shadow: none; }
       .main-navigation .nav-menu .menu-item a:hover {
         text-decoration: underline; }
+
+.home .nav-menu .menu-item a,
+.page-id-26 .nav-menu .menu-item a {
+  margin-right: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000; }
+  .home .nav-menu .menu-item a:hover,
+  .page-id-26 .nav-menu .menu-item a:hover {
+    color: #f0e4d1; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -442,24 +487,23 @@ textarea {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
-.site-content {
+.blog .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1120px;
   margin: 0 auto; }
-  .site-content .content-area {
+  .blog .site-content .content-area {
     width: 73%;
-    border-right: 1px solid #e1e1e1;
     padding-top: 3rem;
     padding-right: 3rem; }
-    .site-content .content-area .entry-header {
+    .blog .site-content .content-area .entry-header {
       position: relative;
       overflow: hidden; }
-      .site-content .content-area .entry-header img {
+      .blog .site-content .content-area .entry-header img {
         width: 100%;
-        height: auto; }
-      .site-content .content-area .entry-header .entry-title {
+        height: 100%; }
+      .blog .site-content .content-area .entry-header .entry-title {
         position: absolute;
         top: 20px;
         left: 0;
@@ -467,12 +511,12 @@ textarea {
         padding: 10px;
         text-transform: uppercase;
         font-size: 2rem; }
-        .site-content .content-area .entry-header .entry-title a {
+        .blog .site-content .content-area .entry-header .entry-title a {
           color: white;
           text-decoration: none; }
-          .site-content .content-area .entry-header .entry-title a:hover {
+          .blog .site-content .content-area .entry-header .entry-title a:hover {
             color: #f0e4d1; }
-      .site-content .content-area .entry-header .entry-meta {
+      .blog .site-content .content-area .entry-header .entry-meta {
         position: absolute;
         bottom: 7px;
         right: 0;
@@ -480,8 +524,43 @@ textarea {
         background: #248a83;
         padding: 5px;
         text-transform: uppercase; }
-  .site-content .widget-area {
-    width: 27%; }
+  .blog .site-content .widget-area {
+    width: 27%;
+    border-left: 1px solid #e1e1e1; }
+
+.journal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem; }
+
+.journal-content {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 33% 33% 33%;
+  margin: 0 4rem;
+  width: 1120px; }
+  .journal-content .home-page-journal {
+    border: 1px solid gray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+    .journal-content .home-page-journal .home-page-journal-image img {
+      width: 100%;
+      height: auto; }
+
+.page-about .entry-header {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Media
@@ -561,6 +640,9 @@ object {
             justify-content: center; }
   .post-26 .entry-content p {
     margin: 0; }
+
+.post-36 {
+  border-right: 1px solid #e1e1e1; }
 
 .site-footer {
   background-image: url("../../images/dark-wood@2x.png");
