@@ -315,12 +315,28 @@ big {
 
 .hero-banner {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  display: block; }
   .hero-banner .wp-post-image {
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    height: auto;
-    -webkit-transform: translateY(-32%);
-            transform: translateY(-32%); }
+    height: 100%;
+    background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.5)); }
+  .hero-banner-fp {
+    position: relative; }
+    .hero-banner-fp .wp-post-image {
+      -o-object-position: center top;
+         object-position: center top; }
+    .hero-banner-fp .logo-full {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .hero-banner-about .wp-post-image {
+    -o-object-position: center bottom;
+       object-position: center bottom; }
   .hero-banner .hero-banner-title {
     position: absolute;
     z-index: 1;
@@ -376,13 +392,16 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 0.5px solid #e1e1e1;
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: none;
   width: 100%; }
+  .main-navigation a {
+    margin-right: auto; }
   .main-navigation .menu-toggle {
     display: none; }
   .main-navigation .nav-menu {
@@ -397,20 +416,24 @@ textarea {
       margin-right: 15px;
       text-decoration: none;
       color: #248a83;
-      text-shadow: none; }
+      text-shadow: none;
+      text-transform: uppercase; }
       .main-navigation .nav-menu .menu-item a:hover {
         text-decoration: underline; }
 
-.home .nav-menu .menu-item a,
-.page-id-26 .nav-menu .menu-item a {
-  margin-right: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000; }
-  .home .nav-menu .menu-item a:hover,
-  .page-id-26 .nav-menu .menu-item a:hover {
-    color: #f0e4d1; }
+.home .main-navigation,
+.page-about .main-navigation {
+  border-bottom: none; }
+  .home .main-navigation .nav-menu .menu-item a,
+  .page-about .main-navigation .nav-menu .menu-item a {
+    margin-right: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000; }
+    .home .main-navigation .nav-menu .menu-item a:hover,
+    .page-about .main-navigation .nav-menu .menu-item a:hover {
+      color: #f0e4d1; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -487,36 +510,37 @@ textarea {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
-.blog .site-content {
+.site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1120px;
   margin: 0 auto; }
-  .blog .site-content .content-area {
-    width: 73%;
+  .site-content .content-area {
+    width: 70%;
     padding-top: 3rem;
     padding-right: 3rem; }
-    .blog .site-content .content-area .entry-header {
+    .site-content .content-area .entry-header {
       position: relative;
       overflow: hidden; }
-      .blog .site-content .content-area .entry-header img {
+      .site-content .content-area .entry-header img {
         width: 100%;
         height: 100%; }
-      .blog .site-content .content-area .entry-header .entry-title {
+      .site-content .content-area .entry-header .entry-title {
         position: absolute;
         top: 20px;
         left: 0;
         background: #248a83;
         padding: 10px;
+        color: white;
         text-transform: uppercase;
         font-size: 2rem; }
-        .blog .site-content .content-area .entry-header .entry-title a {
+        .site-content .content-area .entry-header .entry-title a {
           color: white;
           text-decoration: none; }
-          .blog .site-content .content-area .entry-header .entry-title a:hover {
+          .site-content .content-area .entry-header .entry-title a:hover {
             color: #f0e4d1; }
-      .blog .site-content .content-area .entry-header .entry-meta {
+      .site-content .content-area .entry-header .entry-meta {
         position: absolute;
         bottom: 7px;
         right: 0;
@@ -524,9 +548,19 @@ textarea {
         background: #248a83;
         padding: 5px;
         text-transform: uppercase; }
-  .blog .site-content .widget-area {
-    width: 27%;
-    border-left: 1px solid #e1e1e1; }
+  .site-content .widget-area {
+    width: 30%;
+    border-left: 1px solid #e1e1e1;
+    padding-left: 1rem; }
+
+.home .site-content,
+.page-about .site-content {
+  display: block;
+  width: 100%;
+  margin: auto; }
+  .home .site-content .content-area,
+  .page-about .site-content .content-area {
+    width: 100%; }
 
 .journal-title {
   display: -webkit-box;
@@ -659,11 +693,17 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     margin: 0;
-    line-height: 2.5rem; }
+    padding: 0;
+    line-height: 2.5rem;
+    position: relative; }
+    .site-footer .footer-info-container .footer-logo {
+      position: absolute;
+      right: 50px;
+      top: 20px;
+      height: 50px; }
   .site-footer .copyright {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -672,3 +712,10 @@ object {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+
+.product-archive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem; }
+  .product-archive .product-item-container {
+    border: 1px solid grey; }

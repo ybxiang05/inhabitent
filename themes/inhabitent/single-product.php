@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<p>$<?php the_field('price'); ?></p>
+			<p><?php the_title();?>..........$<?php the_field('price'); ?></p>
 
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>

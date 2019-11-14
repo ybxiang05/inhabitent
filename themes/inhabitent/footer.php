@@ -36,7 +36,9 @@
 							<span class="hours-date">Sunday:</span> Closed
 						</p>
 					</div>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-text.svg" height="35px" alt="Inhabitent tent logo"/>
+					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+						<img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-text.svg"  alt="Inhabitent tent logo"/>
+					</a>
 				</div>
 				<div class="copyright">copyright &copy; inhabitant</div>
 			</footer><!-- #colophon -->

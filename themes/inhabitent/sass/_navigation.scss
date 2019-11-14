@@ -6,11 +6,15 @@
 
 .main-navigation {
   display: flex;
-  justify-content: space-between;
-  // border-bottom: 0.5px solid #e1e1e1;
+  justify-content: flex-end;
+  border-bottom: 0.5px solid #e1e1e1;
   align-content: center;
   background-color: none;
   width: 100%;
+
+  a {
+    margin-right: auto;
+  }
 
   .menu-toggle {
     display: none;
@@ -28,6 +32,7 @@
       text-decoration: none;
       color: #248a83;
       text-shadow: none;
+      text-transform: uppercase;
       &:hover {
         text-decoration: underline;
       }
@@ -36,16 +41,19 @@
 }
 
 .home,
-.page-id-26 {
-  .nav-menu {
-    .menu-item a {
-      margin-right: 15px;
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #fff;
-      text-shadow: 1px 1px 1px #000;
-      &:hover {
-        color: #f0e4d1;
+.page-about {
+  .main-navigation {
+    border-bottom: none;
+    .nav-menu {
+      .menu-item a {
+        margin-right: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        &:hover {
+          color: #f0e4d1;
+        }
       }
     }
   }

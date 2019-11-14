@@ -18,20 +18,24 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+	<div class="product-archive">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 								
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
+				<article id="post-<?php the_ID(); ?>" <?php post_class("product-item-container"); ?>>
+					<section class="entry-header product-image">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail( 'large' ); ?>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+					<p class="product-name-price">
+						<?php the_title();?>..........$<?php the_field('price'); ?>
+					</p>
+					</section>
 						<?php endif; ?>
 
-						<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-					</header><!-- .entry-header -->
+
+<!-- .entry-header -->
 
 					<div class="entry-content">
 						<?php the_excerpt(); ?>
@@ -39,6 +43,7 @@ get_header(); ?>
 				</article><!-- #post-## -->
 
 			<?php endwhile; ?>
+			</div>
 
 			<?php the_posts_navigation(); ?>
 

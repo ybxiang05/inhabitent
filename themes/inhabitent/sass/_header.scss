@@ -17,10 +17,36 @@
 .hero-banner {
   position: relative;
   height: 100vh;
+  display: block;
   .wp-post-image {
+    object-fit: cover;
+    // object-position: center bottom;
     width: 100%;
-    height: auto;
-    transform: translateY(-32%);
+    height: 100%;
+    background-color: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0,
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+
+  &-fp {
+    position: relative;
+    .wp-post-image {
+      object-position: center top;
+    }
+    .logo-full {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-about {
+    .wp-post-image {
+      object-position: center bottom;
+    }
   }
   .hero-banner-title {
     position: absolute;

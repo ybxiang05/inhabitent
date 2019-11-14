@@ -32,10 +32,11 @@
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent-white.svg" height="35px" alt="Inhabitent tent logo"/>
 							<?php else:?>
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg" height="35px" alt="Inhabitent tent logo"/>
-			<?php endif;?>
+			<?php endif;?></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary',
 					'menu' => 'primary-menu',
-					'menu_class' => 'menu nav-menu' ) ); ?>
+					'menu_class' => 'menu nav-menu' ) ); 
+					?>
 					<?php get_search_form();?>
 					
 
@@ -51,13 +52,27 @@
 			<div id="content" class="site-content">
 
 			
-			<?php 
-				if(is_front_page() || is_page('About')):
-				if ( has_post_thumbnail() ) : ?>
-				<section class="hero-banner">
-					<?php the_post_thumbnail( 'large', ['class' => 'hero-banner-image'] ); ?>
-					<h2 class="hero-banner-title"><?php echo get_the_title(); ?></h2>
-				</section>
-					<?php endif;
+				<?php 
+				if(is_front_page()):
+					if ( has_post_thumbnail() ) : ?>
+						<section class="hero-banner hero-banner-fp">
+							<?php the_post_thumbnail( 'full', ['class' => 'hero-banner-image'] ); ?>
 					
-				endif;	?>
+						<!-- Todo add the inhabitent logo here -->
+							<img class="logo-full" src="<?php echo get_stylesheet_directory_uri();?>/images/logos/inhabitent-logo-full.svg" alt="Inhabitent logo"/>
+						</section>
+					<?php endif;	
+				endif;	
+				?>
+
+				<?php 
+				if(is_page('About')):
+					if ( has_post_thumbnail() ) : ?>
+						<section class="hero-banner hero-banner-about">
+						<?php the_post_thumbnail( 'full', ['class' => 'hero-banner-image'] ); ?>
+						<h2 class="hero-banner-title">
+						<?php echo get_the_title(); ?></h2>
+						</section>
+					<?php endif;	
+				endif;	
+				?>

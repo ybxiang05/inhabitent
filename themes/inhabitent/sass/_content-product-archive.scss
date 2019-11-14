@@ -1,0 +1,9 @@
+.product-archive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  //   grid-template-rows: 25% 25% 25% 25%;
+  gap: $base__space-unit;
+  .product-item-container {
+    border: 1px solid grey;
+  }
+}
