@@ -15,9 +15,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 			<?php //the_post_navigation(); ?>
-		<button><i class="fab fa-facebook-f">like</i></button>
-		<button><i class="fab fa-twitter">tweet</i></button>
-		<button><i class="fab fa-pinterest-p">pin</i></button>
+			<?php get_template_part('template-parts/content', 'social-media');?>
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :

@@ -60,8 +60,8 @@
   }
 }
 .home,
+.page-about,
 .tax-product_type,
-.single-product,
 .post-type-archive {
   .site-content {
     display: block;
@@ -103,6 +103,7 @@
     .single-entry-text {
       padding: 0.5rem;
       height: 100%;
+      position: relative;
 
       .entry-meta {
         font-size: 0.75rem;
@@ -113,6 +114,7 @@
         color: #248a83;
         justify-content: left;
         line-height: 1.5rem;
+        padding-bottom: 2rem;
 
         &:hover {
           color: #2f1339;
@@ -121,12 +123,27 @@
       .btn-white {
         margin: 0;
         display: flex;
-        justify-self: flex-end;
+        justify-self: flex-start;
+        position: absolute;
+        bottom: 0.5rem;
       }
     }
   }
 }
-// }
+
+.social-media {
+  display: flex;
+  width: 60%;
+  .btn-white {
+    margin-right: 0.25rem;
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    .fab {
+      padding-right: 0.25rem;
+    }
+  }
+}
 
 .page-about .entry-header {
   display: none;
