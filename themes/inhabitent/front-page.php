@@ -19,42 +19,62 @@ get_header(); ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-			<?php endif; ?>
-
-            <?php /* Start the Loop */ ?>
+            <?php endif; ?>
             
+    <?php /* Shop Stuff Menu */ ?>
+    <section class="product-info-container">
+            <h2 class="container-header">Shop Stuff</h2>
+            <?php
+               $terms = get_terms( array(
+                   'taxonomy' => 'product_type',
+                   'hide_empty' => 1,
+               ) );
+               if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
+            ?>
+               <div class="product-type-blocks">
+                  <?php foreach ( $terms as $term ) : ?>
+                     <div class="product-type-block-wrapper">
+                        <img class="product-type-icon" src="<?php echo get_template_directory_uri() . '/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
+                        <p class="product-type-description"><?php echo $term->description; ?></p>
+                        <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> stuff</a></p>
+                     </div>
+                  <?php endforeach; ?>
+               </div>
+            <?php endif; ?>
+         </section>
+    <?php /* Start Journal Loop */ ?>
             <?php 
-                
                 $arg_journal = array(
                     'order' => 'ASC',
                     'posts_per_page' => 3,
                     'post_type' => 'post'); 
 
                 $journal_entries = new WP_Query ($arg_journal);?>
-            <h2 class="journal-title">Inhabitent Journal</h2>
 
-            <div class="journal-content">
-             <?php while ( $journal_entries->have_posts() ) : $journal_entries->the_post(); ?>
-                <section class="home-page-journal">
-                    <span class="home-page-journal-image"> 
-                        <?php the_post_thumbnail('medium'); ?></span>
-                        <div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> 
-		</div>
-                    <a href="<?php the_permalink(); ?>"><h3 class="home-page-journal-title"><?php the_title(); ?></h3></a>
-                    
-                </section>
-            
-                
-
-                <?php //get_template_part( 'template-parts/content' ); ?>
-                
-                
-
-
-			<?php endwhile; ?>
-            </div>
-
+            <section class="journal-container">
+                <h2 class="container-header">Inhabitent Journal</h2>
+                <div class="articles-container">
+                    <?php while ( $journal_entries->have_posts() ) : $journal_entries->the_post(); ?>
+                        <section class="single-article-container">
+                            <span class="single-article-image"> 
+                                <?php the_post_thumbnail('medium'); ?>
+                            </span>
+                            <div class="single-entry-text">
+                                <div class="entry-meta">
+                                    <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> 
+                                </div>
+                                <a href="<?php the_permalink(); ?>">
+                                    <h3 class="single-article-title"><?php the_title(); ?></h3>
+                                </a>
+                                <a href="<?php the_permalink(); ?>" class="btn-white">
+                                read entry</a>
+                            </div>
+                        </section>
+                    <?php endwhile; ?>
+                </div>
+            </section>
+    <?php /* End Journal Loop */ ?>
+    
 			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>

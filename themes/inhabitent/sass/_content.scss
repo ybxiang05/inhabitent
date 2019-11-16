@@ -6,13 +6,14 @@
 
 .site-content {
   display: flex;
-  width: 1120px;
-  margin: 0 auto;
+  width: $width;
+  margin: auto;
 
   .content-area {
-    width: 70%;
-    padding-top: 3rem;
-    padding-right: 3rem;
+    width: 73%;
+    margin: auto;
+    padding-top: 5%;
+    padding-right: 5%;
 
     .entry-header {
       position: relative;
@@ -53,13 +54,15 @@
   }
 
   .widget-area {
-    width: 30%;
+    width: 27%;
     border-left: 1px solid #e1e1e1;
-    padding-left: 1rem;
+    padding: 1rem;
   }
 }
 .home,
-.page-about {
+.tax-product_type,
+.single-product,
+.post-type-archive {
   .site-content {
     display: block;
     width: 100%;
@@ -67,11 +70,12 @@
 
     .content-area {
       width: 100%;
+      padding: 0;
     }
   }
 }
 
-.journal-title {
+.container-header {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -79,26 +83,50 @@
   font-weight: 400;
   letter-spacing: 0.25rem;
 }
-.journal-content {
+.articles-container {
   display: grid;
   gap: $base__space-unit;
   grid-template-columns: 33% 33% 33%;
-  margin: 0 4rem;
-  width: 1120px;
-  .home-page-journal {
-    border: 1px solid gray;
+  margin: auto;
+  width: $width;
+  .single-article-container {
+    border: 1px solid #e1e1e1;
     display: flex;
     flex-flow: column nowrap;
-    // width: 33%;
-
-    .home-page-journal-image {
+    .single-article-image {
       & img {
         width: 100%;
-        height: auto;
+        max-height: 250px;
+        border-bottom: 5px solid #e1e1e1;
+      }
+    }
+    .single-entry-text {
+      padding: 0.5rem;
+      height: 100%;
+
+      .entry-meta {
+        font-size: 0.75rem;
+        padding: 0;
+      }
+      .single-article-title {
+        font-size: 1.25rem;
+        color: #248a83;
+        justify-content: left;
+        line-height: 1.5rem;
+
+        &:hover {
+          color: #2f1339;
+        }
+      }
+      .btn-white {
+        margin: 0;
+        display: flex;
+        justify-self: flex-end;
       }
     }
   }
 }
+// }
 
 .page-about .entry-header {
   display: none;

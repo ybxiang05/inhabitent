@@ -19,6 +19,13 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<a href="<?php the_permalink(); ?>">
+			<h3 class="search-result-header">
+				<?php the_title(); ?>
+			</h3>
+		</a>
+		<p class="search-result-details">
+			<?php the_excerpt();?></p>
+		<a href="<?php the_permalink(); ?>" class="btn-white">read more &rarr;</a>
 	</div><!-- .entry-summary -->
 </article><!-- #post-## -->

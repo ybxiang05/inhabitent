@@ -33,6 +33,7 @@
       color: #248a83;
       text-shadow: none;
       text-transform: uppercase;
+      font-family: $font__code;
       &:hover {
         text-decoration: underline;
       }
@@ -55,6 +56,41 @@
           color: #f0e4d1;
         }
       }
+    }
+  }
+}
+
+a.btn {
+  color: white;
+  background-color: #248a83;
+  text-transform: uppercase;
+  font-family: $font__code;
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  &:hover {
+    background-color: #19625d;
+  }
+  &-white {
+    color: #2f1339;
+    background-color: white;
+    border: 1px solid #2f1339;
+    text-transform: uppercase;
+    font-family: $font__code;
+    padding: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    margin-left: 0;
+    align-self: flex-start;
+    &:hover {
+      background-color: #248a83;
+      color: white;
+      border: none;
     }
   }
 }

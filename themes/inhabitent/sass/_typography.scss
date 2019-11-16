@@ -1,9 +1,8 @@
 /*--------------------------------------------------------------
-# Typography
+# Typography organized by page
 --------------------------------------------------------------*/
 
 body,
-button,
 input,
 select,
 textarea {
@@ -15,16 +14,22 @@ textarea {
 
 /* Headings */
 
-h3 {
-  clear: both;
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: $font__code;
   text-transform: uppercase;
-  color: #d99054;
+  display: flex;
+  justify-content: center;
 }
 
 /* Copy */
 
 p {
-  margin: $base__space-unit;
+  // margin: $base__space-unit;
   text-decoration: none;
   color: black;
   font-size: 1rem;
@@ -79,4 +84,36 @@ ins {
 
 big {
   font-size: 125%;
+}
+
+/* Search Results*/
+
+.search-results {
+  .search-result-header {
+    font-size: 2rem;
+    color: #248a83;
+    justify-content: left;
+
+    &:hover {
+      color: #2f1339;
+    }
+  }
+
+  p {
+    margin-left: 0;
+  }
+  .btn-white {
+    display: flex;
+    width: 150px;
+    margin-left: 0;
+  }
+}
+
+/*headings organized by page*/
+
+.archive-product-title {
+  font-size: 2rem;
+}
+.product-type-title {
+  font-size: 2.5rem;
 }

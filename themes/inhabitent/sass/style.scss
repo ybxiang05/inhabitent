@@ -55,7 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'normalize';
 @import 'fonts';
 @import 'typography';
-// @import 'elements';
+@import 'elements';
 @import 'header';
 @import 'forms';
 @import 'navigation';
@@ -65,4 +65,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'media';
 @import 'page-templates';
 @import 'footer';
-@import 'content-product-archive';
+@import 'content-product';
+@import 'content-journal';

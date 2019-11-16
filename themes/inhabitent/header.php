@@ -58,7 +58,6 @@
 						<section class="hero-banner hero-banner-fp">
 							<?php the_post_thumbnail( 'full', ['class' => 'hero-banner-image'] ); ?>
 					
-						<!-- Todo add the inhabitent logo here -->
 							<img class="logo-full" src="<?php echo get_stylesheet_directory_uri();?>/images/logos/inhabitent-logo-full.svg" alt="Inhabitent logo"/>
 						</section>
 					<?php endif;	

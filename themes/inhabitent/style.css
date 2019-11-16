@@ -81,7 +81,8 @@ template {
   display: none; }
 
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  text-decoration: none; }
 
 a:active,
 a:hover {
@@ -162,9 +163,9 @@ select {
   text-transform: none; }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -180,23 +181,23 @@ input::-moz-focus-inner {
 input {
   line-height: normal; }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0; }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto; }
 
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
           box-sizing: content-box; }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
@@ -225,33 +226,97 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+/**
+ * Sample @font-face rules for Merriweather
+ * 
+ * Usage:
+ * Copy these rules into the appropriate Sass partial and update the file paths as needed
+ *
+*/
+@font-face {
+  font-family: 'Merriweather Web';
+  src: url("../../fonts/Merriweather/fonts/Merriweather/fonts/merriweather-light-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.svg#merriweatherlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather Web';
+  src: url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.svg#merriweatherlight_italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather Web';
+  src: url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.svg#merriweatherbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather Web';
+  src: url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.svg#merriweatherbold_italic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+/**
+ * Sample @font-face rules for Novocento
+ * 
+ * Usage:
+ * Copy these rules into the appropriate Sass partial and update the file paths as needed
+ *
+*/
+@font-face {
+  font-family: 'Novecento Sans Web';
+  src: url("../../fonts/Novecento/fonts/Novecento/fonts/novecentosanswide-normal-webfont.eot");
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.woff2") format("woff2"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.woff") format("woff"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.ttf") format("truetype"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.svg#novecento_sans_widenormal") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecento Sans Web';
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.eot");
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.ttf") format("truetype"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.svg#novecento_sans_widedemibold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
-# Typography
+# Typography organized by page
 --------------------------------------------------------------*/
 body,
-button,
 input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather Web", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
-h3 {
-  clear: both;
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: "Novecento Sans Web";
   text-transform: uppercase;
-  color: #d99054; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /* Copy */
 p {
-  margin: 1.5rem;
   text-decoration: none;
   color: black;
   font-size: 1rem;
-  font-family: sans-serif; }
+  font-family: "Merriweather Web", sans-serif; }
 
 dfn,
 cite,
@@ -280,7 +345,7 @@ code,
 kbd,
 tt,
 var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: "Novecento Sans Web";
   font-size: 15px;
   font-size: 0.9375rem; }
 
@@ -296,6 +361,108 @@ ins {
 
 big {
   font-size: 125%; }
+
+/* Search Results*/
+.search-results .search-result-header {
+  font-size: 2rem;
+  color: #248a83;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left; }
+  .search-results .search-result-header:hover {
+    color: #2f1339; }
+
+.search-results p {
+  margin-left: 0; }
+
+.search-results .btn-white {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  margin-left: 0; }
+
+/*headings organized by page*/
+.archive-product-title {
+  font-size: 2rem; }
+
+.product-type-title {
+  font-size: 2.5rem; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem; }
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+
+blockquote,
+q {
+  quotes: '' ''; }
+  blockquote:before, blockquote:after,
+  q:before,
+  q:after {
+    content: ''; }
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5rem; }
+
+ul,
+ol {
+  margin: 0 0 1.5rem 3rem; }
+
+ul {
+  list-style: none; }
+
+ol {
+  list-style: decimal; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5rem; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 1.5rem 1.5rem; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+a img {
+  width: 50px; }
+
+table {
+  margin: 0 0 1.5rem;
+  width: 100%; }
+
+button {
+  color: #2f1339;
+  background-color: white; }
 
 .home,
 .page-about {
@@ -352,7 +519,6 @@ big {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
@@ -417,7 +583,8 @@ textarea {
       text-decoration: none;
       color: #248a83;
       text-shadow: none;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-family: "Novecento Sans Web"; }
       .main-navigation .nav-menu .menu-item a:hover {
         text-decoration: underline; }
 
@@ -434,6 +601,46 @@ textarea {
     .home .main-navigation .nav-menu .menu-item a:hover,
     .page-about .main-navigation .nav-menu .menu-item a:hover {
       color: #f0e4d1; }
+
+a.btn {
+  color: white;
+  background-color: #248a83;
+  text-transform: uppercase;
+  font-family: "Novecento Sans Web";
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+  margin: auto; }
+  a.btn:hover {
+    background-color: #19625d; }
+  a.btn-white {
+    color: #2f1339;
+    background-color: white;
+    border: 1px solid #2f1339;
+    text-transform: uppercase;
+    font-family: "Novecento Sans Web";
+    padding: 0.5rem;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 150px;
+    margin-left: 0;
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
+    a.btn-white:hover {
+      background-color: #248a83;
+      color: white;
+      border: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -514,12 +721,13 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1120px;
-  margin: 0 auto; }
+  width: 87.5%;
+  margin: auto; }
   .site-content .content-area {
-    width: 70%;
-    padding-top: 3rem;
-    padding-right: 3rem; }
+    width: 73%;
+    margin: auto;
+    padding-top: 5%;
+    padding-right: 5%; }
     .site-content .content-area .entry-header {
       position: relative;
       overflow: hidden; }
@@ -549,20 +757,25 @@ textarea {
         padding: 5px;
         text-transform: uppercase; }
   .site-content .widget-area {
-    width: 30%;
+    width: 27%;
     border-left: 1px solid #e1e1e1;
-    padding-left: 1rem; }
+    padding: 1rem; }
 
 .home .site-content,
-.page-about .site-content {
+.tax-product_type .site-content,
+.single-product .site-content,
+.post-type-archive .site-content {
   display: block;
   width: 100%;
   margin: auto; }
   .home .site-content .content-area,
-  .page-about .site-content .content-area {
-    width: 100%; }
+  .tax-product_type .site-content .content-area,
+  .single-product .site-content .content-area,
+  .post-type-archive .site-content .content-area {
+    width: 100%;
+    padding: 0; }
 
-.journal-title {
+.container-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,14 +787,14 @@ textarea {
   font-weight: 400;
   letter-spacing: 0.25rem; }
 
-.journal-content {
+.articles-container {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 33% 33% 33%;
-  margin: 0 4rem;
-  width: 1120px; }
-  .journal-content .home-page-journal {
-    border: 1px solid gray;
+  margin: auto;
+  width: 87.5%; }
+  .articles-container .single-article-container {
+    border: 1px solid #e1e1e1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -589,9 +802,31 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap; }
-    .journal-content .home-page-journal .home-page-journal-image img {
+    .articles-container .single-article-container .single-article-image img {
       width: 100%;
-      height: auto; }
+      max-height: 250px;
+      border-bottom: 5px solid #e1e1e1; }
+    .articles-container .single-article-container .single-entry-text {
+      padding: 0.5rem;
+      height: 100%; }
+      .articles-container .single-article-container .single-entry-text .entry-meta {
+        font-size: 0.75rem;
+        padding: 0; }
+      .articles-container .single-article-container .single-entry-text .single-article-title {
+        font-size: 1.25rem;
+        color: #248a83;
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
+        line-height: 1.5rem; }
+        .articles-container .single-article-container .single-entry-text .single-article-title:hover {
+          color: #2f1339; }
+      .articles-container .single-article-container .single-entry-text .btn-white {
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-self: flex-end; }
 
 .page-about .entry-header {
   display: none; }
@@ -675,12 +910,10 @@ object {
   .post-26 .entry-content p {
     margin: 0; }
 
-.post-36 {
-  border-right: 1px solid #e1e1e1; }
-
 .site-footer {
   background-image: url("../../images/dark-wood@2x.png");
-  padding: 2em; }
+  padding: 2em;
+  margin-top: 5rem; }
   .site-footer p,
   .site-footer a {
     color: white;
@@ -699,11 +932,17 @@ object {
     padding: 0;
     line-height: 2.5rem;
     position: relative; }
+    .site-footer .footer-info-container h3 {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      color: #d99054; }
     .site-footer .footer-info-container .footer-logo {
       position: absolute;
       right: 50px;
       top: 20px;
-      height: 50px; }
+      height: 50px;
+      width: auto; }
   .site-footer .copyright {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -713,9 +952,133 @@ object {
         -ms-flex-pack: center;
             justify-content: center; }
 
-.product-archive {
-  display: grid;
+/* Product Archive Page */
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  position: relative; }
+  .product-info .elipses {
+    position: absolute;
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .product-info .product-name {
+    margin: auto 0rem auto 1rem;
+    padding-right: 0.25rem;
+    line-height: 3rem;
+    z-index: 1;
+    background-color: white; }
+  .product-info .product-price {
+    font-size: 0.9rem;
+    margin: auto 1rem auto 0rem;
+    padding-left: 0.25rem;
+    z-index: 1;
+    background-color: white; }
+
+/* Product Type Nav - Product Archive */
+.content-area .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  margin: auto;
+  padding-bottom: 3rem;
+  width: 87.5%;
+  border-bottom: 1px dashed #e1e1e1; }
+  .content-area .nav-menu .menu-item a {
+    text-decoration: none;
+    color: #248a83;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 2rem;
+    font-family: "Novecento Sans Web"; }
+    .content-area .nav-menu .menu-item a:hover {
+      text-decoration: underline; }
+
+/* Archive Products */
+.archive .articles-container {
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem; }
-  .product-archive .product-item-container {
-    border: 1px solid grey; }
+  padding-top: 3rem; }
+  .archive .articles-container .single-article-image {
+    height: 250px; }
+    .archive .articles-container .single-article-image a img {
+      -o-object-fit: cover;
+         object-fit: cover; }
+
+/* Product Type Nav Front Page */
+.product-type-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto; }
+  .product-type-blocks .product-type-block-wrapper {
+    border: 1px solid #e1e1e1;
+    border-top: 5px solid #e1e1e1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 1rem; }
+    .product-type-blocks .product-type-block-wrapper:hover {
+      border: 1px solid #d99054;
+      border-top: 5px solid #d99054; }
+    .product-type-blocks .product-type-block-wrapper .product-type-icon {
+      height: 75px;
+      width: auto;
+      padding-top: 1rem; }
+
+/* Product Type Page*/
+.product-type-description {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
+
+/* journal archive home.php*/
+.blog .content-area .journal-entry {
+  margin-bottom: 3rem; }
+  .blog .content-area .journal-entry .entry-title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background: #248a83;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem; }
+    .blog .content-area .journal-entry .entry-title a {
+      color: white;
+      text-decoration: none; }
+      .blog .content-area .journal-entry .entry-title a:hover {
+        color: #f0e4d1; }
+    .blog .content-area .journal-entry .entry-title .entry-meta {
+      position: absolute;
+      bottom: 7px;
+      right: 0;
+      color: white;
+      background: #248a83;
+      padding: 5px;
+      text-transform: uppercase; }
