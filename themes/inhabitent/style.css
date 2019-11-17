@@ -475,7 +475,6 @@ button {
     .page-about .site-header .main-navigation {
       position: absolute;
       top: 0.5rem;
-      left: 6.25%;
       z-index: 1;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -555,78 +554,6 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
-.main-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  border-bottom: 0.5px solid #e1e1e1;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background-color: none;
-  width: 87.5%; }
-  .main-navigation a {
-    margin-right: auto; }
-  .main-navigation .menu-toggle {
-    display: none; }
-  .main-navigation .nav-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    list-style-type: none; }
-    .main-navigation .nav-menu .menu-item a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #248a83;
-      text-shadow: none;
-      text-transform: uppercase;
-      font-family: "Novecento Sans Web"; }
-      .main-navigation .nav-menu .menu-item a:hover {
-        text-decoration: underline; }
-  .main-navigation .search-form .search-form-container {
-    position: relative;
-    display: inline-block;
-    background: none;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
-    -webkit-box-shadow: 1px 1px 1px #000;
-            box-shadow: 1px 1px 1px #000; }
-    .main-navigation .search-form .search-form-container::after {
-      content: '';
-      display: block;
-      -webkit-transition: all 1s ease 0.5s;
-      transition: all 1s ease 0.5s; }
-    .main-navigation .search-form .search-form-container .fa-search {
-      position: absolute;
-      top: 5px;
-      right: 160px;
-      color: #248a83; }
-      .main-navigation .search-form .search-form-container .fa-search:hover {
-        color: #19625d; }
-    .main-navigation .search-form .search-form-container[data-state='close'] {
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-      .main-navigation .search-form .search-form-container[data-state='close']::after {
-        width: 0%;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
-      .main-navigation .search-form .search-form-container[data-state='close'] .fa-search {
-        pointer-events: none; }
-    .main-navigation .search-form .search-form-container .search-field {
-      -webkit-transition: width 1s ease;
-      transition: width 1s ease;
-      width: 180px;
-      height: 25px;
-      background: none;
-      border: 0;
-      outline: none;
-      color: #666; }
-
 .home .main-navigation,
 .page-about .main-navigation {
   border-bottom: none; }
@@ -640,6 +567,114 @@ textarea {
     .home .main-navigation .nav-menu .menu-item a:hover,
     .page-about .main-navigation .nav-menu .menu-item a:hover {
       color: #f0e4d1; }
+  .home .main-navigation .search-form .search-form-container,
+  .page-about .main-navigation .search-form .search-form-container {
+    display: inline-block;
+    background: none;
+    -webkit-transition: 1s;
+    transition: 1s; }
+    .home .main-navigation .search-form .search-form-container .fa-search,
+    .page-about .main-navigation .search-form .search-form-container .fa-search {
+      color: #fff;
+      text-shadow: 1px 1px 1px #000; }
+      .home .main-navigation .search-form .search-form-container .fa-search:hover,
+      .page-about .main-navigation .search-form .search-form-container .fa-search:hover {
+        color: #f0e4d1; }
+    .home .main-navigation .search-form .search-form-container .search-field,
+    .page-about .main-navigation .search-form .search-form-container .search-field {
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      width: 200px;
+      height: 25px;
+      background: none;
+      border: 0;
+      outline: none;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      display: none;
+      text-transform: uppercase; }
+      .home .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder,
+      .page-about .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder {
+        color: #fff;
+        text-shadow: 1px 1px 1px #000; }
+      .home .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder,
+      .page-about .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder {
+        color: #fff;
+        text-shadow: 1px 1px 1px #000; }
+      .home .main-navigation .search-form .search-form-container .search-field::placeholder,
+      .page-about .main-navigation .search-form .search-form-container .search-field::placeholder {
+        color: #fff;
+        text-shadow: 1px 1px 1px #000; }
+
+.main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 0.5px solid #e1e1e1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: none;
+  width: 100%;
+  margin: auto;
+  padding: 0.5rem 6.5%;
+  height: 50px; }
+  .main-navigation a {
+    margin-right: auto; }
+  .main-navigation .menu-toggle {
+    display: none; }
+  .main-navigation .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+    margin: auto; }
+    .main-navigation .nav-menu .menu-item a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #248a83;
+      text-shadow: none;
+      text-transform: uppercase;
+      font-family: "Novecento Sans Web"; }
+      .main-navigation .nav-menu .menu-item a:hover {
+        text-decoration: underline; }
+  .main-navigation .search-form .search-form-container {
+    display: inline-block;
+    background: none;
+    -webkit-transition: 1s;
+    transition: 1s; }
+    .main-navigation .search-form .search-form-container::after {
+      content: '';
+      display: block;
+      -webkit-transition: 1s;
+      transition: 1s; }
+    .main-navigation .search-form .search-form-container .fa-search {
+      color: #248a83; }
+      .main-navigation .search-form .search-form-container .fa-search:hover {
+        color: #19625d; }
+    .main-navigation .search-form .search-form-container .search-field {
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      width: 200px;
+      height: 25px;
+      background: none;
+      border: 0;
+      outline: none;
+      color: #666;
+      display: none;
+      text-transform: uppercase; }
+      .main-navigation .search-form .search-form-container .search-field:blur {
+        display: none; }
 
 a.btn {
   color: white;
@@ -761,7 +796,8 @@ a.btn {
   display: -ms-flexbox;
   display: flex;
   width: 87.5%;
-  margin: auto; }
+  margin: auto;
+  padding-bottom: 3rem; }
   .site-content .content-area {
     width: 73%;
     margin: auto;
@@ -795,6 +831,10 @@ a.btn {
         background: #248a83;
         padding: 5px;
         text-transform: uppercase; }
+      .site-content .content-area .entry-header .entry-content {
+        width: 100%;
+        padding-right: 5%;
+        padding-top: 5%; }
   .site-content .widget-area {
     width: 27%;
     border-left: 1px solid #e1e1e1;
@@ -806,7 +846,8 @@ a.btn {
 .post-type-archive .site-content {
   display: block;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  padding-bottom: 3rem; }
   .home .site-content .content-area,
   .page-about .site-content .content-area,
   .tax-product_type .site-content .content-area,
@@ -906,13 +947,13 @@ a.btn {
 embed,
 iframe,
 object {
-  max-width: 100%; }
+  width: 100%; }
 
 /* Captions */
 .wp-caption {
   margin-bottom: 1.5rem;
   max-width: 100%; }
-  .wp-caption img[class*="wp-image-"] {
+  .wp-caption img[class*='wp-image-'] {
     display: block;
     margin-left: auto;
     margin-right: auto; }
@@ -972,8 +1013,8 @@ object {
 
 .site-footer {
   background-image: url("../../images/dark-wood@2x.png");
-  padding: 2em;
-  margin-top: 5rem; }
+  width: 100%;
+  margin: auto; }
   .site-footer p,
   .site-footer a {
     color: white;
@@ -988,29 +1029,43 @@ object {
     display: flex;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    margin: 0;
-    padding: 0;
+    width: 87.5%;
+    margin: auto;
+    padding: 2.5rem 0 1rem 0;
     line-height: 2.5rem;
     position: relative; }
+    .site-footer .footer-info-container .contact-info {
+      margin-right: 5rem; }
+      .site-footer .footer-info-container .contact-info a:hover {
+        text-decoration: underline; }
+      .site-footer .footer-info-container .contact-info i {
+        padding-right: 0.5rem; }
     .site-footer .footer-info-container h3 {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      color: #d99054; }
+      color: #d99054;
+      letter-spacing: 0.1rem;
+      font-size: 1.25rem;
+      margin-bottom: 0; }
     .site-footer .footer-info-container .footer-logo {
       position: absolute;
-      right: 50px;
+      right: 0;
       top: 20px;
       height: 50px;
+      margin: 3rem 0;
       width: auto; }
   .site-footer .copyright {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Novecento Sans Web";
+    padding-bottom: 2rem; }
 
 /* Product Archive Page */
 .product-info {

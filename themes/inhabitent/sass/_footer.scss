@@ -1,8 +1,10 @@
 .site-footer {
   background-image: url('../../images/dark-wood@2x.png');
   //   height: 400px;
-  padding: 2em;
-  margin-top: 5rem;
+  // padding: 2em;
+  width: 100%;
+  margin: auto;
+  // margin-top: 5rem;
   & p,
   a {
     color: white;
@@ -15,28 +17,47 @@
   .footer-info-container {
     display: flex;
     align-content: flex-start;
-    margin: 0;
-    padding: 0;
-    // padding-top: 1rem;
+    width: $width;
+    margin: auto;
+    padding: 2.5rem 0 1rem 0;
     line-height: 2.5rem;
     position: relative;
+
+    .contact-info {
+      margin-right: 5rem;
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      i {
+        padding-right: 0.5rem;
+      }
+    }
 
     & h3 {
       justify-content: flex-start;
       color: #d99054;
+      letter-spacing: 0.1rem;
+      font-size: 1.25rem;
+      margin-bottom: 0;
     }
 
     .footer-logo {
       position: absolute;
-      right: 50px;
+      right: 0;
       top: 20px;
       height: 50px;
+      margin: 3rem 0;
       width: auto;
     }
   }
   .copyright {
     display: flex;
-    margin: 0;
     justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $font__code;
+    padding-bottom: 2rem;
   }
 }

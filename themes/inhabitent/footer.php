@@ -40,11 +40,11 @@
 						<img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-text.svg"  alt="Inhabitent tent logo"/>
 					</a>
 				</div>
-				<div class="copyright">copyright &copy; inhabitant</div>
+				<div class="copyright">copyright &copy; 2019 inhabitant</div>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-
+	
 	</body>
 </html>
