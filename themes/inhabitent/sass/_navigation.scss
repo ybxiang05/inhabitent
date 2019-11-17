@@ -10,7 +10,7 @@
   border-bottom: 0.5px solid #e1e1e1;
   align-content: center;
   background-color: none;
-  width: 100%;
+  width: $width;
 
   a {
     margin-right: auto;
@@ -36,6 +36,48 @@
       font-family: $font__code;
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+  .search-form {
+    .search-form-container {
+      position: relative;
+      display: inline-block;
+      background: none;
+      transition: all 1s ease;
+      box-shadow: 1px 1px 1px #000;
+      &::after {
+        content: '';
+        display: block;
+        transition: all 1s ease 0.5s;
+      }
+      .fa-search {
+        position: absolute;
+        top: 5px;
+        right: 160px;
+        color: #248a83;
+        &:hover {
+          color: #19625d;
+        }
+      }
+      &[data-state='close'] {
+        transition: all 0.3s ease;
+        &::after {
+          width: 0%;
+          transition: all 0.3s ease;
+        }
+        .fa-search {
+          pointer-events: none;
+        }
+      }
+      .search-field {
+        transition: width 1s ease;
+        width: 180px;
+        height: 25px;
+        background: none;
+        border: 0;
+        outline: none;
+        color: #666;
       }
     }
   }
@@ -90,7 +132,7 @@ a.btn {
     &:hover {
       background-color: #248a83;
       color: white;
-      border: none;
+      border: 1px solid #248a83;
     }
   }
 }

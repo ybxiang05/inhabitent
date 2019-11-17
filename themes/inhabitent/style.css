@@ -474,11 +474,12 @@ button {
     .home .site-header .main-navigation,
     .page-about .site-header .main-navigation {
       position: absolute;
+      top: 0.5rem;
+      left: 6.25%;
       z-index: 1;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
-      width: 100%; }
+      display: flex; }
 
 .hero-banner {
   position: relative;
@@ -565,7 +566,7 @@ textarea {
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: none;
-  width: 100%; }
+  width: 87.5%; }
   .main-navigation a {
     margin-right: auto; }
   .main-navigation .menu-toggle {
@@ -587,6 +588,44 @@ textarea {
       font-family: "Novecento Sans Web"; }
       .main-navigation .nav-menu .menu-item a:hover {
         text-decoration: underline; }
+  .main-navigation .search-form .search-form-container {
+    position: relative;
+    display: inline-block;
+    background: none;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-shadow: 1px 1px 1px #000;
+            box-shadow: 1px 1px 1px #000; }
+    .main-navigation .search-form .search-form-container::after {
+      content: '';
+      display: block;
+      -webkit-transition: all 1s ease 0.5s;
+      transition: all 1s ease 0.5s; }
+    .main-navigation .search-form .search-form-container .fa-search {
+      position: absolute;
+      top: 5px;
+      right: 160px;
+      color: #248a83; }
+      .main-navigation .search-form .search-form-container .fa-search:hover {
+        color: #19625d; }
+    .main-navigation .search-form .search-form-container[data-state='close'] {
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .main-navigation .search-form .search-form-container[data-state='close']::after {
+        width: 0%;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .main-navigation .search-form .search-form-container[data-state='close'] .fa-search {
+        pointer-events: none; }
+    .main-navigation .search-form .search-form-container .search-field {
+      -webkit-transition: width 1s ease;
+      transition: width 1s ease;
+      width: 180px;
+      height: 25px;
+      background: none;
+      border: 0;
+      outline: none;
+      color: #666; }
 
 .home .main-navigation,
 .page-about .main-navigation {
@@ -640,7 +679,7 @@ a.btn {
     a.btn-white:hover {
       background-color: #248a83;
       color: white;
-      border: none; }
+      border: 1px solid #248a83; }
 
 /*--------------------------------------------------------------
 # Accessibility
