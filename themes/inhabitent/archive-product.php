@@ -31,6 +31,12 @@ get_header(); ?>
 		</nav>
 			<div class="articles-container">
 			<?php /* Start the Loop */ ?>
+			<?php $arg_products = array(
+				'title' => 'ASC',
+				'posts_per_page' => 12,
+				'post_type' => 'products');
+				
+				$products_entries = new WP_Query ($arg_products);?>
 			<?php while ( have_posts() ) : the_post(); ?>	
 				<article id="post-<?php the_ID(); ?>" <?php post_class("product-item-wrapper"); ?>>
 				<div class="single-article-container">
@@ -60,7 +66,6 @@ get_header(); ?>
 				</div>
 			</div>	
 
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

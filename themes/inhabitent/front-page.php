@@ -45,7 +45,7 @@ get_header(); ?>
     <?php /* Start Journal Loop */ ?>
             <?php 
                 $arg_journal = array(
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'posts_per_page' => 3,
                     'post_type' => 'post'); 
 
@@ -74,6 +74,36 @@ get_header(); ?>
                 </div>
             </section>
     <?php /* End Journal Loop */ ?>
+
+
+    <?php /* Start Adventures Loop */ ?>
+            <?php 
+                $arg_adventures = array(
+                    'order' => 'ASC',
+                    'posts_per_page' => 4,
+                    'post_type' => 'adventures'); 
+
+                $adventures_entries = new WP_Query ($arg_adventures);?>
+
+            <section class="adventures-container">
+                <h2 class="container-header">Adventures</h2>
+                <div class="adventure-articles-container">
+                    <?php while ( $adventures_entries->have_posts() ) : $adventures_entries->the_post(); ?>
+                        <section class='single-adventures-container' style="background-image: url('<?php  the_post_thumbnail("medium");?>')">
+                            
+                            <div class="single-entry-text">
+                                <a href="<?php the_permalink(); ?>">
+                                    <h3 class="single-adventures-title"><?php the_title(); ?></h3>
+                                </a>
+                                <a href="<?php the_permalink(); ?>" class="btn-white">
+                                read more</a>
+                            </div>
+                        </section>
+                    <?php endwhile; ?>
+                </div>
+            </section>
+    <?php /* End Adventures Loop */ ?>
+
     
 			<?php the_posts_navigation(); ?>
 

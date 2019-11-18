@@ -8,7 +8,7 @@
   display: flex;
   width: $width;
   margin: auto;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 
   .content-area {
     width: 73%;
@@ -66,14 +66,27 @@
   }
 }
 .home,
-.page-about,
+.page-about {
+  .site-content {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-top: 0;
+
+    .content-area {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
 .tax-product_type,
 .post-type-archive {
   .site-content {
     display: block;
     width: 100%;
     margin: auto;
-    padding-bottom: 3rem;
+    padding-top: 3rem;
 
     .content-area {
       width: 100%;
@@ -92,8 +105,8 @@
 }
 .articles-container {
   display: grid;
-  gap: $base__space-unit;
-  grid-template-columns: 33% 33% 33%;
+  gap: 2%;
+  grid-template-columns: 32% 32% 32%;
   margin: auto;
   width: $width;
   .single-article-container {
