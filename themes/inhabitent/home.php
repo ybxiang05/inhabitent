@@ -20,6 +20,13 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>
+			<?php 
+                $arg_journal = array(
+                    'order' => 'ASC',
+                    'posts_per_page' => 3,
+                    'post_type' => 'post'); 
+
+                $journal_entries = new WP_Query ($arg_journal);?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="journal-entry">
 				<?php get_template_part( 'template-parts/content' ); ?>

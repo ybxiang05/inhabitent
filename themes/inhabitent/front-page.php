@@ -103,6 +103,7 @@ get_header(); ?>
                 </div>
             </section>
     <?php /* End Adventures Loop */ ?>
+    <a class="btn">more adventures</a>
 
     
 			<?php the_posts_navigation(); ?>
