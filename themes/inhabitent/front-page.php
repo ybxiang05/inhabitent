@@ -89,7 +89,7 @@ get_header(); ?>
                 <h2 class="container-header">Adventures</h2>
                 <div class="adventure-articles-container">
                     <?php while ( $adventures_entries->have_posts() ) : $adventures_entries->the_post(); ?>
-                        <section class='single-adventures-container' style="background-image: url('<?php  the_post_thumbnail("medium");?>')">
+                        <section class='single-adventures-container' style="background-image: url('<?php echo get_the_post_thumbnail_url($post, "medium");?>')">
                             
                             <div class="single-entry-text">
                                 <a href="<?php the_permalink(); ?>">

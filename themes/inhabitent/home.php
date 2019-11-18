@@ -27,7 +27,7 @@ get_header(); ?>
                     'post_type' => 'post'); 
 
                 $journal_entries = new WP_Query ($arg_journal);?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( $journal_entries -> have_posts() ) : $journal_entries -> the_post(); ?>
 			<div class="journal-entry">
 				<?php get_template_part( 'template-parts/content' ); ?>
 				<a href="<?php the_permalink(); ?>" class="btn-white">read more &rarr;</a>

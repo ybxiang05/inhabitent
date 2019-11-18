@@ -34,9 +34,12 @@
             }
           }
           .search-field {
+            font-family: $font__code;
+
             &::placeholder {
               color: #666;
               text-shadow: none;
+              font-family: $font__code;
             }
           }
         }
@@ -56,34 +59,18 @@
     }
     .search-form {
       .search-form-container {
-        // position: relative;
         display: inline-block;
         background: none;
-        transition: 1s;
-        // &::after {
-        //   content: '';
-        //   display: block;
-        //   transition: 1s;
-        // }
         .fa-search {
           color: #fff;
           text-shadow: 1px 1px 1px #000;
+
           &:hover {
             color: #f0e4d1;
           }
         }
-        // &[data-state='close'] {
-        //   transition: all 1s ease;
-        //   &::after {
-        //     width: 0%;
-        //     transition: all 0.3s ease;
-        //   }
-        //   .fa-search {
-        //     pointer-events: none;
-        //   }
-        // }
+
         .search-field {
-          transition: 0.5s;
           width: 200px;
           height: 25px;
           background: none;
@@ -91,12 +78,14 @@
           outline: none;
           color: #fff;
           text-shadow: 1px 1px 1px #000;
+          font-family: $font__code;
 
           display: none;
           text-transform: uppercase;
           &::placeholder {
             color: #fff;
             text-shadow: 1px 1px 1px #000;
+            font-family: $font__code;
           }
         }
       }
@@ -147,8 +136,6 @@
     }
   }
   .search-form {
-    transition: width 1s;
-
     .search-form-container {
       // position: relative;
       display: inline-block;
@@ -156,7 +143,6 @@
       &::after {
         content: '';
         display: block;
-        transition: 1s;
       }
       .fa-search {
         color: #248a83;
@@ -164,16 +150,7 @@
           color: #19625d;
         }
       }
-      // &[data-state='close'] {
-      //   transition: all 1s ease;
-      //   &::after {
-      //     width: 0%;
-      //     transition: all 0.3s ease;
-      //   }
-      //   .fa-search {
-      //     pointer-events: none;
-      //   }
-      // }
+
       .search-field {
         width: 200px;
         height: 25px;

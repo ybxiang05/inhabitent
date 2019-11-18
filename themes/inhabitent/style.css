@@ -577,18 +577,24 @@ textarea {
       .home .main-navigation.sticky .search-form .search-form-container .fa-search:hover,
       .page-about .main-navigation.sticky .search-form .search-form-container .fa-search:hover {
         color: #19625d; }
-    .home .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder,
-    .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder {
-      color: #666;
-      text-shadow: none; }
-    .home .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder,
-    .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder {
-      color: #666;
-      text-shadow: none; }
-    .home .main-navigation.sticky .search-form .search-form-container .search-field::placeholder,
-    .page-about .main-navigation.sticky .search-form .search-form-container .search-field::placeholder {
-      color: #666;
-      text-shadow: none; }
+    .home .main-navigation.sticky .search-form .search-form-container .search-field,
+    .page-about .main-navigation.sticky .search-form .search-form-container .search-field {
+      font-family: "Novecento Sans Web"; }
+      .home .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder,
+      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder {
+        color: #666;
+        text-shadow: none;
+        font-family: "Novecento Sans Web"; }
+      .home .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder,
+      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder {
+        color: #666;
+        text-shadow: none;
+        font-family: "Novecento Sans Web"; }
+      .home .main-navigation.sticky .search-form .search-form-container .search-field::placeholder,
+      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::placeholder {
+        color: #666;
+        text-shadow: none;
+        font-family: "Novecento Sans Web"; }
   .home .main-navigation .nav-menu .menu-item a,
   .page-about .main-navigation .nav-menu .menu-item a {
     margin-right: 15px;
@@ -602,9 +608,7 @@ textarea {
   .home .main-navigation .search-form .search-form-container,
   .page-about .main-navigation .search-form .search-form-container {
     display: inline-block;
-    background: none;
-    -webkit-transition: 1s;
-    transition: 1s; }
+    background: none; }
     .home .main-navigation .search-form .search-form-container .fa-search,
     .page-about .main-navigation .search-form .search-form-container .fa-search {
       color: #fff;
@@ -614,8 +618,6 @@ textarea {
         color: #f0e4d1; }
     .home .main-navigation .search-form .search-form-container .search-field,
     .page-about .main-navigation .search-form .search-form-container .search-field {
-      -webkit-transition: 0.5s;
-      transition: 0.5s;
       width: 200px;
       height: 25px;
       background: none;
@@ -623,20 +625,24 @@ textarea {
       outline: none;
       color: #fff;
       text-shadow: 1px 1px 1px #000;
+      font-family: "Novecento Sans Web";
       display: none;
       text-transform: uppercase; }
       .home .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder,
       .page-about .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder {
         color: #fff;
-        text-shadow: 1px 1px 1px #000; }
+        text-shadow: 1px 1px 1px #000;
+        font-family: "Novecento Sans Web"; }
       .home .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder,
       .page-about .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder {
         color: #fff;
-        text-shadow: 1px 1px 1px #000; }
+        text-shadow: 1px 1px 1px #000;
+        font-family: "Novecento Sans Web"; }
       .home .main-navigation .search-form .search-form-container .search-field::placeholder,
       .page-about .main-navigation .search-form .search-form-container .search-field::placeholder {
         color: #fff;
-        text-shadow: 1px 1px 1px #000; }
+        text-shadow: 1px 1px 1px #000;
+        font-family: "Novecento Sans Web"; }
 
 .main-navigation {
   display: -webkit-box;
@@ -683,32 +689,27 @@ textarea {
       font-family: "Novecento Sans Web"; }
       .main-navigation .nav-menu .menu-item a:hover {
         color: #19625d; }
-  .main-navigation .search-form {
-    -webkit-transition: width 1s;
-    transition: width 1s; }
-    .main-navigation .search-form .search-form-container {
-      display: inline-block;
-      background: none; }
-      .main-navigation .search-form .search-form-container::after {
-        content: '';
-        display: block;
-        -webkit-transition: 1s;
-        transition: 1s; }
-      .main-navigation .search-form .search-form-container .fa-search {
-        color: #248a83; }
-        .main-navigation .search-form .search-form-container .fa-search:hover {
-          color: #19625d; }
-      .main-navigation .search-form .search-form-container .search-field {
-        width: 200px;
-        height: 25px;
-        background: none;
-        border: 0;
-        outline: none;
-        color: #666;
-        display: none;
-        text-transform: uppercase; }
-        .main-navigation .search-form .search-form-container .search-field:blur {
-          display: none; }
+  .main-navigation .search-form .search-form-container {
+    display: inline-block;
+    background: none; }
+    .main-navigation .search-form .search-form-container::after {
+      content: '';
+      display: block; }
+    .main-navigation .search-form .search-form-container .fa-search {
+      color: #248a83; }
+      .main-navigation .search-form .search-form-container .fa-search:hover {
+        color: #19625d; }
+    .main-navigation .search-form .search-form-container .search-field {
+      width: 200px;
+      height: 25px;
+      background: none;
+      border: 0;
+      outline: none;
+      color: #666;
+      display: none;
+      text-transform: uppercase; }
+      .main-navigation .search-form .search-form-container .search-field:blur {
+        display: none; }
 
 a.btn {
   color: white;

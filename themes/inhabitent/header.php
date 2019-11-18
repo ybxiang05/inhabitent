@@ -76,4 +76,16 @@
 				endif;	
 				?>
 
+<?php 
+				if(is_singular('adventures')):
+					if ( has_post_thumbnail() ) : ?>
+						<section class="hero-banner hero-banner-about">
+						<?php the_post_thumbnail( 'full', ['class' => 'hero-banner-image'] ); ?>
+						<h2 class="hero-banner-title">
+						<?php echo get_the_title(); ?></h2>
+						</section>
+					<?php endif;	
+				endif;	
+				?>
+
 			
