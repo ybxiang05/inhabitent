@@ -1,5 +1,6 @@
 .home,
-.page-about {
+.page-about,
+.single-adventures {
   width: 100%;
   .site-header {
     position: relative;
@@ -57,4 +58,18 @@
     text-transform: uppercase;
     font-size: 3rem;
   }
+}
+
+.tent-logo {
+  display: none;
+}
+
+.sticky .tent-green,
+.tent-green.show-green,
+.tent-white.show-white {
+  display: block;
+}
+
+.sticky .tent-white {
+  display: none;
 }

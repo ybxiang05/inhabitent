@@ -465,14 +465,17 @@ button {
   background-color: white; }
 
 .home,
-.page-about {
+.page-about,
+.single-adventures {
   width: 100%; }
   .home .site-header,
-  .page-about .site-header {
+  .page-about .site-header,
+  .single-adventures .site-header {
     position: relative;
     width: 100%; }
     .home .site-header .main-navigation,
-    .page-about .site-header .main-navigation {
+    .page-about .site-header .main-navigation,
+    .single-adventures .site-header .main-navigation {
       position: absolute;
       z-index: 1;
       display: -webkit-box;
@@ -514,6 +517,17 @@ button {
     text-transform: uppercase;
     font-size: 3rem; }
 
+.tent-logo {
+  display: none; }
+
+.sticky .tent-green,
+.tent-green.show-green,
+.tent-white.show-white {
+  display: block; }
+
+.sticky .tent-white {
+  display: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -554,70 +568,86 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 .home .main-navigation,
-.page-about .main-navigation {
+.page-about .main-navigation,
+.single-adventures .main-navigation {
   border-bottom: none;
   background-color: rgba(255, 255, 255, 0); }
   .home .main-navigation.sticky,
-  .page-about .main-navigation.sticky {
+  .page-about .main-navigation.sticky,
+  .single-adventures .main-navigation.sticky {
     position: fixed;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.75);
     border-bottom: 1px solid #e1e1e1; }
     .home .main-navigation.sticky .nav-menu .menu-item a,
-    .page-about .main-navigation.sticky .nav-menu .menu-item a {
+    .page-about .main-navigation.sticky .nav-menu .menu-item a,
+    .single-adventures .main-navigation.sticky .nav-menu .menu-item a {
       color: #248a83;
       text-shadow: none; }
       .home .main-navigation.sticky .nav-menu .menu-item a:hover,
-      .page-about .main-navigation.sticky .nav-menu .menu-item a:hover {
+      .page-about .main-navigation.sticky .nav-menu .menu-item a:hover,
+      .single-adventures .main-navigation.sticky .nav-menu .menu-item a:hover {
         color: #19625d; }
     .home .main-navigation.sticky .search-form .search-form-container .fa-search,
-    .page-about .main-navigation.sticky .search-form .search-form-container .fa-search {
+    .page-about .main-navigation.sticky .search-form .search-form-container .fa-search,
+    .single-adventures .main-navigation.sticky .search-form .search-form-container .fa-search {
       color: #248a83;
       text-shadow: none; }
       .home .main-navigation.sticky .search-form .search-form-container .fa-search:hover,
-      .page-about .main-navigation.sticky .search-form .search-form-container .fa-search:hover {
+      .page-about .main-navigation.sticky .search-form .search-form-container .fa-search:hover,
+      .single-adventures .main-navigation.sticky .search-form .search-form-container .fa-search:hover {
         color: #19625d; }
     .home .main-navigation.sticky .search-form .search-form-container .search-field,
-    .page-about .main-navigation.sticky .search-form .search-form-container .search-field {
+    .page-about .main-navigation.sticky .search-form .search-form-container .search-field,
+    .single-adventures .main-navigation.sticky .search-form .search-form-container .search-field {
       font-family: "Novecento Sans Web"; }
       .home .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder,
-      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder {
+      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder,
+      .single-adventures .main-navigation.sticky .search-form .search-form-container .search-field::-webkit-input-placeholder {
         color: #666;
         text-shadow: none;
         font-family: "Novecento Sans Web"; }
       .home .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder,
-      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder {
+      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder,
+      .single-adventures .main-navigation.sticky .search-form .search-form-container .search-field::-ms-input-placeholder {
         color: #666;
         text-shadow: none;
         font-family: "Novecento Sans Web"; }
       .home .main-navigation.sticky .search-form .search-form-container .search-field::placeholder,
-      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::placeholder {
+      .page-about .main-navigation.sticky .search-form .search-form-container .search-field::placeholder,
+      .single-adventures .main-navigation.sticky .search-form .search-form-container .search-field::placeholder {
         color: #666;
         text-shadow: none;
         font-family: "Novecento Sans Web"; }
   .home .main-navigation .nav-menu .menu-item a,
-  .page-about .main-navigation .nav-menu .menu-item a {
+  .page-about .main-navigation .nav-menu .menu-item a,
+  .single-adventures .main-navigation .nav-menu .menu-item a {
     margin-right: 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     text-shadow: 1px 1px 1px #000; }
     .home .main-navigation .nav-menu .menu-item a:hover,
-    .page-about .main-navigation .nav-menu .menu-item a:hover {
+    .page-about .main-navigation .nav-menu .menu-item a:hover,
+    .single-adventures .main-navigation .nav-menu .menu-item a:hover {
       color: #f0e4d1; }
   .home .main-navigation .search-form .search-form-container,
-  .page-about .main-navigation .search-form .search-form-container {
+  .page-about .main-navigation .search-form .search-form-container,
+  .single-adventures .main-navigation .search-form .search-form-container {
     display: inline-block;
     background: none; }
     .home .main-navigation .search-form .search-form-container .fa-search,
-    .page-about .main-navigation .search-form .search-form-container .fa-search {
+    .page-about .main-navigation .search-form .search-form-container .fa-search,
+    .single-adventures .main-navigation .search-form .search-form-container .fa-search {
       color: #fff;
       text-shadow: 1px 1px 1px #000; }
       .home .main-navigation .search-form .search-form-container .fa-search:hover,
-      .page-about .main-navigation .search-form .search-form-container .fa-search:hover {
+      .page-about .main-navigation .search-form .search-form-container .fa-search:hover,
+      .single-adventures .main-navigation .search-form .search-form-container .fa-search:hover {
         color: #f0e4d1; }
     .home .main-navigation .search-form .search-form-container .search-field,
-    .page-about .main-navigation .search-form .search-form-container .search-field {
+    .page-about .main-navigation .search-form .search-form-container .search-field,
+    .single-adventures .main-navigation .search-form .search-form-container .search-field {
       width: 200px;
       height: 25px;
       background: none;
@@ -629,17 +659,20 @@ textarea {
       display: none;
       text-transform: uppercase; }
       .home .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder,
-      .page-about .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder {
+      .page-about .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder,
+      .single-adventures .main-navigation .search-form .search-form-container .search-field::-webkit-input-placeholder {
         color: #fff;
         text-shadow: 1px 1px 1px #000;
         font-family: "Novecento Sans Web"; }
       .home .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder,
-      .page-about .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder {
+      .page-about .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder,
+      .single-adventures .main-navigation .search-form .search-form-container .search-field::-ms-input-placeholder {
         color: #fff;
         text-shadow: 1px 1px 1px #000;
         font-family: "Novecento Sans Web"; }
       .home .main-navigation .search-form .search-form-container .search-field::placeholder,
-      .page-about .main-navigation .search-form .search-form-container .search-field::placeholder {
+      .page-about .main-navigation .search-form .search-form-container .search-field::placeholder,
+      .single-adventures .main-navigation .search-form .search-form-container .search-field::placeholder {
         color: #fff;
         text-shadow: 1px 1px 1px #000;
         font-family: "Novecento Sans Web"; }
@@ -876,13 +909,15 @@ a.btn {
     padding: 1rem; }
 
 .home .site-content,
-.page-about .site-content {
+.page-about .site-content,
+.single-adventures .site-content {
   display: block;
   width: 100%;
   margin: auto;
   padding-top: 0; }
   .home .site-content .content-area,
-  .page-about .site-content .content-area {
+  .page-about .site-content .content-area,
+  .single-adventures .site-content .content-area {
     width: 100%;
     padding: 0; }
 
@@ -1325,3 +1360,139 @@ object {
       color: #248a83; }
       .comment-list .comment-body .reply a:hover {
         color: #2f1339; }
+
+/* front-page adventures section*/
+.adventures-container {
+  width: 87.5%;
+  margin: auto; }
+  .adventures-container .adventure-articles-container {
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem; }
+    .adventures-container .adventure-articles-container div:nth-of-type(1) {
+      grid-column: 1/3;
+      grid-row: 1/3; }
+      .adventures-container .adventure-articles-container div:nth-of-type(1) .single-adventures-title {
+        font-size: 3rem; }
+    .adventures-container .adventure-articles-container div:nth-of-type(2) {
+      grid-column: 3/5;
+      grid-row: 1/2; }
+      .adventures-container .adventure-articles-container div:nth-of-type(2) .single-adventures-title {
+        font-size: 2rem; }
+    .adventures-container .adventure-articles-container div:nth-of-type(3) {
+      grid-column: 3/4;
+      grid-row: 2/3; }
+      .adventures-container .adventure-articles-container div:nth-of-type(3) .single-adventures-title {
+        font-size: 1rem; }
+    .adventures-container .adventure-articles-container div:nth-of-type(4) {
+      grid-column: 4/5;
+      grid-row: 2/3; }
+      .adventures-container .adventure-articles-container div:nth-of-type(4) .single-adventures-title {
+        font-size: 1rem; }
+    .adventures-container .adventure-articles-container .single-adventures-container {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative; }
+      .adventures-container .adventure-articles-container .single-adventures-container .single-entry-text a .single-adventures-title {
+        color: #fff;
+        font-family: "Merriweather Web", sans-serif;
+        text-transform: none;
+        text-shadow: 1px 1px 1px #000;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        padding: 1rem;
+        font-weight: 400; }
+        .adventures-container .adventure-articles-container .single-adventures-container .single-entry-text a .single-adventures-title:hover {
+          color: #f0e4d1; }
+      .adventures-container .adventure-articles-container .single-adventures-container .btn-white {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        color: white;
+        text-shadow: 1px 1px 1px #000;
+        background: none;
+        border: 1px solid #fff; }
+        .adventures-container .adventure-articles-container .single-adventures-container .btn-white:hover {
+          background-color: #248a83;
+          border: 1px solid #248a83; }
+  .adventures-container .more-adventures {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    width: 210px;
+    text-justify: center; }
+
+/*adventures archives*/
+.post-type-archive-adventures .archive-adventure-title {
+  padding: 2rem;
+  border-bottom: 1px dashed #e1e1e1;
+  width: 87.5%;
+  margin: auto; }
+
+.post-type-archive-adventures .articles-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem; }
+  .post-type-archive-adventures .articles-container .single-adventure-container {
+    position: relative; }
+    .post-type-archive-adventures .articles-container .single-adventure-container .adventure-info {
+      position: absolute;
+      top: 2rem;
+      left: 2rem; }
+      .post-type-archive-adventures .articles-container .single-adventure-container .adventure-info .adventure-title {
+        font-family: "Merriweather Web", sans-serif;
+        text-transform: unset;
+        font-size: 2.5rem;
+        text-shadow: 1px 1px 1px #000;
+        font-weight: 400;
+        width: 87.5%;
+        color: white; }
+        .post-type-archive-adventures .articles-container .single-adventure-container .adventure-info .adventure-title:hover {
+          color: #f0e4d1; }
+      .post-type-archive-adventures .articles-container .single-adventure-container .adventure-info .btn-white {
+        color: white;
+        text-shadow: 1px 1px 1px #000;
+        background: none;
+        border: 2px solid #fff; }
+        .post-type-archive-adventures .articles-container .single-adventure-container .adventure-info .btn-white:hover {
+          background-color: #248a83;
+          border: 1px solid #248a83; }
+
+/*single adventures page*/
+.single-adventures .single-adventures-page {
+  width: 60%;
+  margin: auto; }
+  .single-adventures .single-adventures-page .entry-header h1 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .single-adventures .single-adventures-page .entry-header .entry-meta {
+    text-transform: uppercase; }
+
+.not-found .page-title {
+  display: block; }
+
+.not-found .search-form-container .fa-search {
+  display: none; }
+
+.not-found .search-form-container .search-field {
+  border: 1px solid #e1e1e1;
+  background-color: #f4f4f4;
+  padding: 0.5rem;
+  display: block; }
+  .not-found .search-form-container .search-field:blur {
+    display: block; }
+
+.not-found .widget h2 {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left; }
+
+.not-found .widget ul {
+  padding: 0;
+  margin: 0; }

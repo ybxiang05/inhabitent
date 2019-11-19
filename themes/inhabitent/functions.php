@@ -55,7 +55,7 @@ function red_starter_content_width() {
 add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget area sidebar.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -71,6 +71,8 @@ function red_starter_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'red_starter_widgets_init' );
+
+
 
 /**
  * Filter the stylesheet_uri to output the minified CSS file.

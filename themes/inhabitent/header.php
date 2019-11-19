@@ -28,11 +28,16 @@
 					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //echo esc_html( 'Main Navigation' ); ?></button> -->
 
 					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-						<?php if(is_front_page() || is_page('About')):?>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent-white.svg" height="35px" alt="Inhabitent tent logo"/>
-							<?php else:?>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg" height="35px" alt="Inhabitent tent logo"/>
-			<?php endif;?></a>
+						<?php $logo_class = 'show-green'; ?>
+
+						<?php if(is_front_page() || is_page('About') || is_singular('adventures')):?>
+							<?php $logo_class = 'show-white'; ?>
+						<?php endif;?>
+
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent-white.svg" class="tent-logo tent-white <?php echo $logo_class; ?>" height="35px" alt="Inhabitent tent logo"/>
+						
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg" class="tent-logo tent-green <?php echo $logo_class; ?>" height="35px" alt="Inhabitent tent logo"/>
+					</a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary',
 					'menu' => 'primary-menu',
 					'menu_class' => 'menu nav-menu' ) ); 
@@ -81,9 +86,7 @@
 					if ( has_post_thumbnail() ) : ?>
 						<section class="hero-banner hero-banner-about">
 						<?php the_post_thumbnail( 'full', ['class' => 'hero-banner-image'] ); ?>
-						<h2 class="hero-banner-title">
-						<?php echo get_the_title(); ?></h2>
-						</section>
+				</section>
 					<?php endif;	
 				endif;	
 				?>
