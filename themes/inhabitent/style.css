@@ -845,15 +845,25 @@ a.btn {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5rem;
-  /* Make sure select elements fit in widgets. */ }
-  .widget select {
-    max-width: 100%; }
-
-/* Search widget. */
-.widget_search .search-submit {
-  display: none; }
+.widget-area .widget {
+  width: 100%;
+  padding-left: 1.5rem; }
+  .widget-area .widget .widget-title {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    color: #2f1339;
+    font-weight: 600;
+    letter-spacing: 0.13rem; }
+  .widget-area .widget a {
+    color: #248a83; }
+    .widget-area .widget a:hover {
+      color: #2f1339; }
+  .widget-area .widget ul {
+    padding: 0;
+    margin: 0; }
+  .widget-area .widget .day-of-week {
+    font-weight: 600; }
 
 /*--------------------------------------------------------------
 # Content
@@ -979,7 +989,8 @@ a.btn {
 embed,
 iframe,
 object {
-  width: 100%; }
+  width: 100%;
+  height: 300px; }
 
 /* Captions */
 .wp-caption {
@@ -1343,23 +1354,59 @@ object {
   width: 100px; }
 
 /*journal single comments*/
-.comment-list {
+.comments-area h2 {
+  font-size: 2.1rem;
+  color: #2f1339;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left; }
+
+.comments-area .comment-list {
   margin: 0;
   padding-left: 0; }
-  .comment-list .comment-body {
+  .comments-area .comment-list .comment-body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     border-bottom: 1px solid #e1e1e1;
     padding: 2rem 0; }
-    .comment-list .comment-body .comment-author-avatar {
+    .comments-area .comment-list .comment-body .comment-author-avatar {
       margin-right: 2rem; }
-      .comment-list .comment-body .comment-author-avatar img {
+      .comments-area .comment-list .comment-body .comment-author-avatar img {
         border-radius: 40px; }
-    .comment-list .comment-body .reply a {
+    .comments-area .comment-list .comment-body .reply a {
       color: #248a83; }
-      .comment-list .comment-body .reply a:hover {
+      .comments-area .comment-list .comment-body .reply a:hover {
         color: #2f1339; }
+
+.comments-area .comment-respond .comment-reply-title {
+  font-size: 1.8rem;
+  color: #2f1339; }
+
+.comments-area .comment-respond .comment-form label {
+  font-family: "Novecento Sans Web";
+  text-transform: uppercase; }
+
+.comments-area .comment-respond .comment-form textarea {
+  border: 1px solid #e1e1e1;
+  background-color: #f4f4f4; }
+
+.comments-area .comment-respond .comment-form .form-submit .submit {
+  text-transform: uppercase;
+  font-family: "Novecento Sans Web";
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border-style: none; }
+  .comments-area .comment-respond .comment-form .form-submit .submit:hover {
+    background-color: #19625d; }
+
+.comments-area .comment-respond .comment-reply-title {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left; }
+
+.comments-area .comment-respond .comment-form .logged-in-as {
+  display: none; }
 
 /* front-page adventures section*/
 .adventures-container {
@@ -1496,3 +1543,41 @@ object {
 .not-found .widget ul {
   padding: 0;
   margin: 0; }
+
+.not-found .widget a {
+  color: #248a83; }
+  .not-found .widget a:hover {
+    color: #19625d; }
+
+.find-us-container {
+  padding-top: 5%;
+  padding-right: 5%;
+  width: 73%; }
+  .find-us-container .entry-title {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    font-size: 2.5rem; }
+  .find-us-container .entry-content h3 {
+    font-size: 2rem;
+    color: #2f1339;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left; }
+  .find-us-container .entry-content .wpcf7 {
+    text-transform: uppercase; }
+    .find-us-container .entry-content .wpcf7 .wpcf7-form label {
+      font-family: "Novecento Sans Web"; }
+    .find-us-container .entry-content .wpcf7 .wpcf7-form span input {
+      border-style: none;
+      border: 1px solid #e1e1e1;
+      background-color: #f4f4f4; }
+    .find-us-container .entry-content .wpcf7 .wpcf7-form .wpcf7-submit {
+      text-transform: uppercase;
+      font-family: "Novecento Sans Web";
+      font-size: 0.9rem;
+      padding: 0.75rem;
+      border-style: none;
+      width: 100px; }
+      .find-us-container .entry-content .wpcf7 .wpcf7-form .wpcf7-submit:hover {
+        background-color: #19625d; }

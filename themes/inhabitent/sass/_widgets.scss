@@ -2,16 +2,28 @@
 # Widgets
 --------------------------------------------------------------*/
 
-.widget {
-	margin: 0 0 $base__space-unit;
-
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
-}
-
-/* Search widget. */
-.widget_search .search-submit {
-	display: none;
+.widget-area {
+  .widget {
+    width: 100%;
+    padding-left: 1.5rem;
+    .widget-title {
+      justify-content: left;
+      color: #2f1339;
+      font-weight: 600;
+      letter-spacing: 0.13rem;
+    }
+    a {
+      color: #248a83;
+      &:hover {
+        color: #2f1339;
+      }
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    .day-of-week {
+      font-weight: 600;
+    }
+  }
 }

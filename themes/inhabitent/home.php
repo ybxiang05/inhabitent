@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php 
                 $arg_journal = array(
                     'order' => 'ASC',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 5,
                     'post_type' => 'post'); 
 
                 $journal_entries = new WP_Query ($arg_journal);?>
