@@ -1,18 +1,96 @@
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
+/*
+Contains:
+*Main Navigation Stylings
+*Main Navigation Stylings with Banner
+*All Button Stylings
+**/
 
-/* Links */
+/* Main Navigation Stylings */
+.main-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  border-bottom: 0.5px solid #e1e1e1;
+  align-items: center;
+  background-color: none;
+  width: 100%;
+  margin: auto;
+  padding: 0.5rem 6.5%;
+  height: 50px;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba($color: #fff, $alpha: 0.75);
 
+  a {
+    margin-right: auto;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: auto;
+
+    .menu-item a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #248a83;
+      text-shadow: none;
+      text-transform: uppercase;
+      font-family: $font__code;
+      &:hover {
+        color: #19625d;
+      }
+    }
+  }
+  .search-form {
+    .search-form-container {
+      display: inline-block;
+      background: none;
+      &::after {
+        content: '';
+        display: block;
+      }
+      .fa-search {
+        color: #248a83;
+        &:hover {
+          color: #19625d;
+        }
+      }
+
+      .search-field {
+        width: 200px;
+        height: 25px;
+        background: none;
+        border: 0;
+        outline: none;
+        color: #666;
+        display: none;
+        text-transform: uppercase;
+        &:blur {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*Main Navigation Styling with Banners*/
 .home,
 .page-about,
 .single-adventures {
   .main-navigation {
     border-bottom: none;
     background-color: rgba($color: #fff, $alpha: 0);
+    position: absolute;
+    z-index: 1;
+    display: flex;
     &.sticky {
       position: fixed;
-      // top: 50px;
       width: 100%;
       background-color: rgba($color: #fff, $alpha: 0.75);
       border-bottom: 1px solid #e1e1e1;
@@ -70,7 +148,6 @@
             color: #f0e4d1;
           }
         }
-
         .search-field {
           width: 200px;
           height: 25px;
@@ -92,81 +169,8 @@
     }
   }
 }
-.main-navigation {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  border-bottom: 0.5px solid #e1e1e1;
-  align-items: center;
-  background-color: none;
-  width: 100%;
-  margin: auto;
-  padding: 0.5rem 6.5%;
-  height: 50px;
-  position: fixed;
-  z-index: 2;
-  background-color: rgba($color: #fff, $alpha: 0.75);
 
-  a {
-    margin-right: auto;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
-  .nav-menu {
-    display: flex;
-    // border: 1px solid pink;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: auto;
-    // margin: auto;
-
-    .menu-item a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #248a83;
-      text-shadow: none;
-      text-transform: uppercase;
-      font-family: $font__code;
-      &:hover {
-        color: #19625d;
-      }
-    }
-  }
-  .search-form {
-    .search-form-container {
-      // position: relative;
-      display: inline-block;
-      background: none;
-      &::after {
-        content: '';
-        display: block;
-      }
-      .fa-search {
-        color: #248a83;
-        &:hover {
-          color: #19625d;
-        }
-      }
-
-      .search-field {
-        width: 200px;
-        height: 25px;
-        background: none;
-        border: 0;
-        outline: none;
-        color: #666;
-        display: none;
-        text-transform: uppercase;
-        &:blur {
-          display: none;
-        }
-      }
-    }
-  }
-}
+/*All Button Stylings*/
 
 a.btn {
   color: white;

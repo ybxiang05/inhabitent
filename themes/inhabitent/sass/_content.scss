@@ -1,8 +1,10 @@
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
+/*
+Contains:
+*General Posts and Pages Layout
+*Social Media 
+*/
 
-/* Posts and pages */
+/* General Posts and Pages Layout */
 
 .site-content {
   display: flex;
@@ -77,34 +79,19 @@
     .content-area {
       width: 100%;
       padding: 0;
+      .container-header {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        font-weight: 400;
+        letter-spacing: 0.25rem;
+      }
     }
   }
 }
 
-.tax-product_type,
-.post-type-archive {
-  .site-content {
-    display: block;
-    width: 100%;
-    margin: auto;
-    padding-top: 3rem;
-
-    .content-area {
-      width: 100%;
-      padding: 0;
-    }
-  }
-}
-
-.container-header {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 2.4rem;
-  font-weight: 400;
-  letter-spacing: 0.25rem;
-}
-
+/* Social Media */
 .social-media {
   display: flex;
   width: 60%;
@@ -117,8 +104,4 @@
       padding-right: 0.25rem;
     }
   }
-}
-
-.page-about .entry-header {
-  display: none;
 }
