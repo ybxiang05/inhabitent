@@ -1,0 +1,38 @@
+/*
+Contains:
+*404 page stylings
+*/
+.not-found {
+  .page-title {
+    display: block;
+  }
+  .search-form-container {
+    .fa-search {
+      display: none;
+    }
+    .search-field {
+      border: 1px solid #e1e1e1;
+      background-color: #f4f4f4;
+      padding: 0.5rem;
+      display: block;
+      &:blur {
+        display: block;
+      }
+    }
+  }
+  .widget {
+    h2 {
+      justify-content: left;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #248a83;
+      &:hover {
+        color: #19625d;
+      }
+    }
+  }
+}

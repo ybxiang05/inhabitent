@@ -1,0 +1,193 @@
+/*
+Contains:
+*journal archive home
+*front page journal section
+*journal single
+*journal single comments
+*/
+
+/* journal archive home.php*/
+.blog {
+  .content-area {
+    .journal-entry {
+      margin-bottom: 3rem;
+      .entry-title {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background: #248a83;
+        padding: 10px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        max-width: 75%;
+        & a {
+          color: white;
+          text-decoration: none;
+          justify-content: left;
+          &:hover {
+            color: #f0e4d1;
+          }
+        }
+
+        .entry-meta {
+          position: absolute;
+          bottom: 7px;
+          right: 0;
+          color: white;
+          background: #248a83;
+          padding: 5px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+/* front page journal section*/
+
+.articles-container {
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 32% 32% 32%;
+  margin: auto;
+  width: $width;
+  .single-article-container {
+    border: 1px solid #e1e1e1;
+    display: flex;
+    flex-flow: column nowrap;
+    .single-article-image {
+      height: 250px;
+      & img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 5px solid #e1e1e1;
+      }
+    }
+    .single-entry-text {
+      padding: 0.5rem;
+      height: 100%;
+      position: relative;
+
+      .entry-meta {
+        font-size: 0.75rem;
+        padding: 0;
+      }
+      .single-article-title {
+        font-size: 1.25rem;
+        color: #248a83;
+        justify-content: left;
+        line-height: 1.5rem;
+        padding-bottom: 2rem;
+
+        &:hover {
+          color: #2f1339;
+        }
+      }
+      .btn-white {
+        margin: 0;
+        display: flex;
+        justify-self: flex-start;
+        position: absolute;
+        bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+/*journal single*/
+
+.single-post {
+  .entry-content {
+    margin-bottom: 2rem;
+  }
+  .entry-footer {
+    margin-bottom: 2rem;
+    .entry-footer-meta {
+      text-transform: uppercase;
+      font-family: $font__code;
+      margin: 2rem 2rem 2rem 0;
+      a {
+        color: #248a83;
+        &:hover {
+          color: #2f1339;
+        }
+      }
+    }
+  }
+  .social-media {
+    .btn-white {
+      width: 100px;
+    }
+  }
+}
+
+/*journal single comments*/
+.comments-area {
+  h2 {
+    font-size: 2.1rem;
+    color: #2f1339;
+    justify-content: left;
+  }
+  .comment-list {
+    margin: 0;
+    padding-left: 0;
+    .comment-body {
+      display: flex;
+      border-bottom: 1px solid #e1e1e1;
+      padding: 2rem 0;
+      .comment-author-avatar {
+        margin-right: 2rem;
+        img {
+          border-radius: 40px;
+        }
+      }
+      .reply a {
+        color: #248a83;
+
+        &:hover {
+          color: #2f1339;
+        }
+      }
+    }
+  }
+  .comment-respond {
+    .comment-reply-title {
+      font-size: 1.8rem;
+      color: #2f1339;
+    }
+    .comment-form {
+      label {
+        font-family: $font__code;
+        text-transform: uppercase;
+      }
+      textarea {
+        border: 1px solid #e1e1e1;
+        background-color: #f4f4f4;
+      }
+      .form-submit {
+        .submit {
+          text-transform: uppercase;
+          font-family: $font__code;
+          font-size: 0.9rem;
+          padding: 0.75rem 1.5rem;
+          border-style: none;
+          &:hover {
+            background-color: #19625d;
+          }
+        }
+      }
+    }
+  }
+  .comment-respond {
+    .comment-reply-title {
+      justify-content: left;
+    }
+    .comment-form {
+      .logged-in-as {
+        display: none;
+      }
+    }
+  }
+}

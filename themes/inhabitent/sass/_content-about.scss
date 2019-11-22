@@ -1,0 +1,25 @@
+/* About page*/
+
+.page-about {
+  max-width: 100%;
+  margin: 0 auto;
+
+  .site-content {
+    article {
+      margin: auto;
+      max-width: 800px;
+      padding: 2rem 0;
+      .entry-header {
+        display: none;
+      }
+      h2 {
+        font-size: 2rem;
+        color: #2f1339;
+      }
+      p {
+        margin: 0;
+        line-height: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+/*
+Contains:
+*find us page
+*/
+
+/*find us page*/
+.find-us-container {
+  padding-top: 5%;
+  padding-right: 5%;
+  width: 73%;
+  .entry-title {
+    justify-content: left;
+    font-size: 2.5rem;
+  }
+  .entry-content {
+    h3 {
+      font-size: 2rem;
+      color: #2f1339;
+      justify-content: left;
+    }
+    .wpcf7 {
+      text-transform: uppercase;
+      .wpcf7-form {
+        label {
+          font-family: $font__code;
+        }
+        span {
+          input {
+            border-style: none;
+            border: 1px solid #e1e1e1;
+            background-color: #f4f4f4;
+          }
+        }
+        .wpcf7-submit {
+          text-transform: uppercase;
+          font-family: $font__code;
+          font-size: 0.9rem;
+          padding: 0.75rem;
+          border-style: none;
+          width: 100px;
+          &:hover {
+            background-color: #19625d;
+          }
+        }
+      }
+    }
+  }
+}
