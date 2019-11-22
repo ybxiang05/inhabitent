@@ -14,7 +14,6 @@
 					<div class="contact-info">
 						<h3>Contact Info</h3>
 						<p>
-
 							<i class="fa fa-envelope "></i>
 								<a href="mailto:info@inhabitent.com">info@inhabitent.com</a>
 						</p>

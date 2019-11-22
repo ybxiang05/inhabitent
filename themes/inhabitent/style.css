@@ -1,8 +1,8 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: RED Starter Theme - BX Version
 Theme URI: http://underscores.me/
-Author: RED Academy
-Author URI: http://www.redacademy.com
+Author: BX
+Author URI: https://github.com/ybxiang05
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -608,6 +608,8 @@ Contains:
   background-color: rgba(255, 255, 255, 0.75); }
   .main-navigation a {
     margin-right: auto; }
+    .main-navigation a img {
+      height: 35px; }
   .main-navigation .menu-toggle {
     display: none; }
   .main-navigation .nav-menu {
@@ -1567,8 +1569,7 @@ Contains:
 /* About page*/
 .page-about {
   max-width: 100%;
-  margin: 0 auto;
-  padding-bottom: 100px; }
+  margin: 0 auto; }
   .page-about .site-content article {
     margin: auto;
     max-width: 800px;

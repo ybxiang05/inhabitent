@@ -28,20 +28,15 @@ get_header(); ?>
 
                 $journal_entries = new WP_Query ($arg_journal);?>
 			<?php while ( $journal_entries -> have_posts() ) : $journal_entries -> the_post(); ?>
-			<div class="journal-entry">
-				<?php get_template_part( 'template-parts/content' ); ?>
-				<a href="<?php the_permalink(); ?>" class="btn-white">read more &rarr;</a>
-			</div>
+				<div class="journal-entry">
+					<?php get_template_part( 'template-parts/content' ); ?>
+					<a href="<?php the_permalink(); ?>" class="btn-white">read more &rarr;</a>
+				</div>
 
 				<!--#post-##-->
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
 		<?php else : ?>
-
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
 		<?php endif; ?>
 
 		</main><!-- #main -->

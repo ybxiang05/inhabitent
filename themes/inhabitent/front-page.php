@@ -21,40 +21,35 @@ get_header(); ?>
 				</header>
             <?php endif; ?>
             
-    <?php /* Shop Stuff Menu */ ?>
-    <section class="product-info-container">
-            <h2 class="container-header">Shop Stuff</h2>
-            <?php
-               $terms = get_terms( array(
+            <?php /* Shop Stuff Menu */ ?>
+            <section class="product-info-container">
+                <h2 class="container-header">Shop Stuff</h2>
+                <?php $terms = get_terms( array(
                    'taxonomy' => 'product_type',
                    'hide_empty' => 1,
-               ) );
-               if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
-            ?>
-               <div class="product-type-blocks">
-                  <?php foreach ( $terms as $term ) : ?>
-                     <div class="product-type-block-wrapper">
-                        <img class="product-type-icon" src="<?php echo get_template_directory_uri() . '/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
-                        <p class="product-type-description"><?php echo $term->description; ?></p>
-                        <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> stuff</a></p>
-                     </div>
-                  <?php endforeach; ?>
-               </div>
-            <?php endif; ?>
-         </section>
-    <?php /* Start Journal Loop */ ?>
-            <?php 
-                $arg_journal = array(
-                    'order' => 'ASC',
-                    'posts_per_page' => 3,
-                    'post_type' => 'post'); 
-
-                $journal_entries = new WP_Query ($arg_journal);?>
-
-            <section class="journal-container">
-                <h2 class="container-header">Inhabitent Journal</h2>
-                <div class="articles-container">
-                    <?php while ( $journal_entries->have_posts() ) : $journal_entries->the_post(); ?>
+                ) );
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :?>
+                    <div class="product-type-blocks">
+                        <?php foreach ( $terms as $term ) : ?>
+                            <div class="product-type-block-wrapper">
+                                <img class="product-type-icon" src="<?php echo get_template_directory_uri() . '/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
+                                <p class="product-type-description"><?php echo $term->description; ?></p>
+                                <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> stuff</a></p>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </section>
+            <?php /* Start Journal Loop */ ?>
+            <?php $arg_journal = array(
+                'order' => 'ASC',
+                'posts_per_page' => 3,
+                'post_type' => 'post'); 
+            $journal_entries = new WP_Query ($arg_journal);?>
+                <section class="journal-container">
+                    <h2 class="container-header">Inhabitent Journal</h2>
+                    <div class="articles-container">
+                        <?php while ( $journal_entries->have_posts() ) : $journal_entries->the_post(); ?>
                         <section class="single-article-container">
                             <span class="single-article-image"> 
                                 <?php the_post_thumbnail('medium'); ?>
@@ -70,20 +65,19 @@ get_header(); ?>
                                 read entry</a>
                             </div>
                         </section>
-                    <?php endwhile; ?>
-                </div>
-            </section>
-    <?php /* End Journal Loop */ ?>
+                        <?php endwhile; ?>
+                    </div>
+                </section>
+            <?php /* End Journal Loop */ ?>
 
 
-    <?php /* Start Adventures Loop */ ?>
-            <?php 
-                $arg_adventures = array(
-                    'order' => 'ASC',
-                    'posts_per_page' => 4,
-                    'post_type' => 'adventures'); 
+            <?php /* Start Adventures Loop */ ?>
+            <?php $arg_adventures = array(
+                'order' => 'ASC',
+                'posts_per_page' => 4,
+                'post_type' => 'adventures'); 
 
-                $adventures_entries = new WP_Query ($arg_adventures);?>
+            $adventures_entries = new WP_Query ($arg_adventures);?>
 
             <section class="adventures-container">
                 <h2 class="container-header">Adventures</h2>
@@ -102,12 +96,8 @@ get_header(); ?>
                     <?php endwhile; ?>
                 </div>
                 <a href="<?php echo get_post_type_archive_link('adventures');?>" class="btn more-adventures">more adventures</a>
-
             </section>
-    <?php /* End Adventures Loop */ ?>
-
-    
-			<?php the_posts_navigation(); ?>
+            <?php /* End Adventures Loop */ ?>
 
 		<?php else : ?>
 

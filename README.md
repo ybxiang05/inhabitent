@@ -2,9 +2,9 @@
 
 Create a demo multi-page site using WordPress as content management system.
 
-# # Project Purpose
+## Project Purpose
 
-# # # WordPress
+### WordPress
 
 - learn to effectively organize project root directory
 - become familiar with template parts and how to use them effectively
@@ -14,26 +14,26 @@ Create a demo multi-page site using WordPress as content management system.
 - learn about WP Database
 - learn about plugins
 
-# # # PHP
+### PHP
 
 - learn to compartmentalize HTML in .php files
 - become familiar with PHP documentation
 - learn to use built-in PHP functions to sort through arrays
 
-# # # SCSS
+### SCSS
 
 - practice using CSS grid for layout organization
 - practice using css transitions/animations
 
-# # # JS/JQuery
+### JS/JQuery
 
 - use functions such as .toggle(), .click(), .addClass(), etc., to embellish user experience
 
-# # Acknowledgements
+## Acknowledgements
 
-# # # This project was developed on the unceded traditional territories of the Squamish, Tsleil-Waututh, and Musqueam Nations.
+### This project was developed on the unceded traditional territories of the Squamish, Tsleil-Waututh, and Musqueam Nations.
 
-# # # Instructors/TAs:
+### Instructors/TAs:
 
 - Jim Bennett, Bass Extraordinaire
 - Randy Walton

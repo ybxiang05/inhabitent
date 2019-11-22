@@ -14,6 +14,7 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="archive-product-title">shop stuff</h1>
 			</header><!-- .page-header -->
+
 			<?php /* Shop Stuff Menu */ ?>
     	<nav class="nav-menu">
             <?php $terms = get_terms( array(
@@ -30,6 +31,7 @@ get_header(); ?>
             <?php endif; ?>
 		</nav>
 			<div class="articles-container">
+				
 			<?php /* Start the Loop */ ?>
 			<?php $arg_products = array(
 				'orderby' => array('title' =>'ASC'),
