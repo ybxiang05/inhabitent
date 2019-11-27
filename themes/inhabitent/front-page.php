@@ -50,7 +50,7 @@ get_header(); ?>
                     <h2 class="container-header">Inhabitent Journal</h2>
                     <div class="articles-container">
                         <?php while ( $journal_entries->have_posts() ) : $journal_entries->the_post(); ?>
-                        <section class="single-article-container">
+                        <article class="single-article-container">
                             <span class="single-article-image"> 
                                 <?php the_post_thumbnail('medium'); ?>
                             </span>
@@ -64,7 +64,7 @@ get_header(); ?>
                                 <a href="<?php the_permalink(); ?>" class="btn-white">
                                 read entry</a>
                             </div>
-                        </section>
+                        </article>
                         <?php endwhile; ?>
                     </div>
                 </section>
@@ -83,7 +83,7 @@ get_header(); ?>
                 <h2 class="container-header">Adventures</h2>
                 <div class="adventure-articles-container">
                     <?php while ( $adventures_entries->have_posts() ) : $adventures_entries->the_post(); ?>
-                        <div class='single-adventures-container' style="background-image: url('<?php echo get_the_post_thumbnail_url($post, "full");?>')">
+                        <article class='single-adventures-container' style="background-image: url('<?php echo get_the_post_thumbnail_url($post, "full");?>')">
                             
                             <div class="single-entry-text">
                                 <a href="<?php the_permalink(); ?>">
@@ -92,7 +92,7 @@ get_header(); ?>
                             </div>
                             <a href="<?php the_permalink(); ?>" class="btn-white">
                                 read more</a>
-                        </div>
+                        </article>
                     <?php endwhile; ?>
                 </div>
                 <a href="<?php echo get_post_type_archive_link('adventures');?>" class="btn more-adventures">more adventures</a>

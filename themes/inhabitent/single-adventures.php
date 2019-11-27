@@ -7,10 +7,10 @@
 
 <?php get_header(); ?>
 <?php while(have_posts()): the_post(); ?>
-    <div class="single-adventures-page">
+    <article class="single-adventures-page">
         <?php get_template_part('template-parts/content', 'adventures')?>
         <?php get_template_part('template-parts/content', 'social-media');?>
-    </div>
+    </article>
 <?php endwhile; // End of the loop. ?>
 
 <?php get_footer(); ?>

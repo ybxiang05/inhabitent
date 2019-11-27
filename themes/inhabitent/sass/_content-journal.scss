@@ -8,37 +8,35 @@ Contains:
 
 /* journal archive home.php*/
 .blog {
-  .content-area {
-    .journal-entry {
-      margin-bottom: 3rem;
-      .entry-title {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        background: #248a83;
-        padding: 10px;
+  .journal-entry {
+    margin-bottom: 3rem;
+    .entry-title {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      background: #248a83;
+      padding: 10px;
+      color: white;
+      text-transform: uppercase;
+      font-size: 2rem;
+      max-width: 75%;
+      & a {
         color: white;
-        text-transform: uppercase;
-        font-size: 2rem;
-        max-width: 75%;
-        & a {
-          color: white;
-          text-decoration: none;
-          justify-content: left;
-          &:hover {
-            color: #f0e4d1;
-          }
+        text-decoration: none;
+        justify-content: left;
+        &:hover {
+          color: #f0e4d1;
         }
+      }
 
-        .entry-meta {
-          position: absolute;
-          bottom: 7px;
-          right: 0;
-          color: white;
-          background: #248a83;
-          padding: 5px;
-          text-transform: uppercase;
-        }
+      .entry-meta {
+        position: absolute;
+        bottom: 7px;
+        right: 0;
+        color: white;
+        background: #248a83;
+        padding: 5px;
+        text-transform: uppercase;
       }
     }
   }

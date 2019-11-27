@@ -1,9 +1,9 @@
 /*!
-Theme Name: RED Starter Theme - BX Version
+Theme Name: Inhabitent Theme BX Version
 Theme URI: http://underscores.me/
 Author: BX
 Author URI: https://github.com/ybxiang05
-Description: A WordPress starter theme for RED Academy students.
+Description: A WordPress theme for the Inhabient project.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1225,9 +1225,9 @@ Contains:
 *journal single comments
 */
 /* journal archive home.php*/
-.blog .content-area .journal-entry {
+.blog .journal-entry {
   margin-bottom: 3rem; }
-  .blog .content-area .journal-entry .entry-title {
+  .blog .journal-entry .entry-title {
     position: absolute;
     top: 20px;
     left: 0;
@@ -1237,15 +1237,15 @@ Contains:
     text-transform: uppercase;
     font-size: 2rem;
     max-width: 75%; }
-    .blog .content-area .journal-entry .entry-title a {
+    .blog .journal-entry .entry-title a {
       color: white;
       text-decoration: none;
       -webkit-box-pack: left;
           -ms-flex-pack: left;
               justify-content: left; }
-      .blog .content-area .journal-entry .entry-title a:hover {
+      .blog .journal-entry .entry-title a:hover {
         color: #f0e4d1; }
-    .blog .content-area .journal-entry .entry-title .entry-meta {
+    .blog .journal-entry .entry-title .entry-meta {
       position: absolute;
       bottom: 7px;
       right: 0;
@@ -1393,25 +1393,25 @@ Contains:
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem; }
-    .adventures-container .adventure-articles-container div:nth-of-type(1) {
+    .adventures-container .adventure-articles-container article:nth-of-type(1) {
       grid-column: 1/3;
       grid-row: 1/3; }
-      .adventures-container .adventure-articles-container div:nth-of-type(1) .single-adventures-title {
+      .adventures-container .adventure-articles-container article:nth-of-type(1) .single-adventures-title {
         font-size: 3rem; }
-    .adventures-container .adventure-articles-container div:nth-of-type(2) {
+    .adventures-container .adventure-articles-container article:nth-of-type(2) {
       grid-column: 3/5;
       grid-row: 1/2; }
-      .adventures-container .adventure-articles-container div:nth-of-type(2) .single-adventures-title {
+      .adventures-container .adventure-articles-container article:nth-of-type(2) .single-adventures-title {
         font-size: 2rem; }
-    .adventures-container .adventure-articles-container div:nth-of-type(3) {
+    .adventures-container .adventure-articles-container article:nth-of-type(3) {
       grid-column: 3/4;
       grid-row: 2/3; }
-      .adventures-container .adventure-articles-container div:nth-of-type(3) .single-adventures-title {
+      .adventures-container .adventure-articles-container article:nth-of-type(3) .single-adventures-title {
         font-size: 1rem; }
-    .adventures-container .adventure-articles-container div:nth-of-type(4) {
+    .adventures-container .adventure-articles-container article:nth-of-type(4) {
       grid-column: 4/5;
       grid-row: 2/3; }
-      .adventures-container .adventure-articles-container div:nth-of-type(4) .single-adventures-title {
+      .adventures-container .adventure-articles-container article:nth-of-type(4) .single-adventures-title {
         font-size: 1rem; }
     .adventures-container .adventure-articles-container .single-adventures-container {
       background-position: center center;

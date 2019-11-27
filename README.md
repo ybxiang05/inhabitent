@@ -36,6 +36,7 @@ Create a demo multi-page site using WordPress as content management system.
 ### Instructors/TAs:
 
 - Jim Bennett, Bass Extraordinaire
+- Ynah Pantig
 - Randy Walton
 - Jeremiah Aguirre
 - William Lindvall
