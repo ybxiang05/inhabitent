@@ -91,11 +91,11 @@ big {
 .search-results {
   .search-result-header {
     font-size: 2rem;
-    color: #248a83;
+    color: $main__green;
     justify-content: left;
 
     &:hover {
-      color: #2f1339;
+      color: $header__purple;
     }
   }
 

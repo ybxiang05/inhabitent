@@ -14,7 +14,7 @@ Contains:
       position: absolute;
       top: 20px;
       left: 0;
-      background: #248a83;
+      background: $main__green;
       padding: 10px;
       color: white;
       text-transform: uppercase;
@@ -25,7 +25,7 @@ Contains:
         text-decoration: none;
         justify-content: left;
         &:hover {
-          color: #f0e4d1;
+          color: $hover__yellow;
         }
       }
 
@@ -34,7 +34,7 @@ Contains:
         bottom: 7px;
         right: 0;
         color: white;
-        background: #248a83;
+        background: $main__green;
         padding: 5px;
         text-transform: uppercase;
       }
@@ -51,7 +51,7 @@ Contains:
   margin: auto;
   width: $width;
   .single-article-container {
-    border: 1px solid #e1e1e1;
+    border: 1px solid $border__grey;
     display: flex;
     flex-flow: column nowrap;
     .single-article-image {
@@ -60,7 +60,7 @@ Contains:
         width: 100%;
         height: 250px;
         object-fit: cover;
-        border-bottom: 5px solid #e1e1e1;
+        border-bottom: 5px solid $border__grey;
       }
     }
     .single-entry-text {
@@ -74,13 +74,13 @@ Contains:
       }
       .single-article-title {
         font-size: 1.25rem;
-        color: #248a83;
+        color: $main__green;
         justify-content: left;
         line-height: 1.5rem;
         padding-bottom: 2rem;
 
         &:hover {
-          color: #2f1339;
+          color: $header__purple;
         }
       }
       .btn-white {
@@ -107,9 +107,9 @@ Contains:
       font-family: $font__code;
       margin: 2rem 2rem 2rem 0;
       a {
-        color: #248a83;
+        color: $main__green;
         &:hover {
-          color: #2f1339;
+          color: $header__purple;
         }
       }
     }
@@ -125,7 +125,7 @@ Contains:
 .comments-area {
   h2 {
     font-size: 2.1rem;
-    color: #2f1339;
+    color: $header__purple;
     justify-content: left;
   }
   .comment-list {
@@ -133,7 +133,7 @@ Contains:
     padding-left: 0;
     .comment-body {
       display: flex;
-      border-bottom: 1px solid #e1e1e1;
+      border-bottom: 1px solid $border__grey;
       padding: 2rem 0;
       .comment-author-avatar {
         margin-right: 2rem;
@@ -142,10 +142,10 @@ Contains:
         }
       }
       .reply a {
-        color: #248a83;
+        color: $main__green;
 
         &:hover {
-          color: #2f1339;
+          color: $header__purple;
         }
       }
     }
@@ -153,7 +153,7 @@ Contains:
   .comment-respond {
     .comment-reply-title {
       font-size: 1.8rem;
-      color: #2f1339;
+      color: $header__purple;
     }
     .comment-form {
       label {
@@ -161,8 +161,8 @@ Contains:
         text-transform: uppercase;
       }
       textarea {
-        border: 1px solid #e1e1e1;
-        background-color: #f4f4f4;
+        border: 1px solid $border__grey;
+        background-color: $input__background;
       }
       .form-submit {
         .submit {
@@ -172,7 +172,7 @@ Contains:
           padding: 0.75rem 1.5rem;
           border-style: none;
           &:hover {
-            background-color: #19625d;
+            background-color: $hover__green;
           }
         }
       }

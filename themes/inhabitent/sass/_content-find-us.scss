@@ -15,7 +15,7 @@ Contains:
   .entry-content {
     h3 {
       font-size: 2rem;
-      color: #2f1339;
+      color: $header__purple;
       justify-content: left;
     }
     .wpcf7 {
@@ -27,8 +27,8 @@ Contains:
         span {
           input {
             border-style: none;
-            border: 1px solid #e1e1e1;
-            background-color: #f4f4f4;
+            border: 1px solid $border__grey;
+            background-color: $input__background;
           }
         }
         .wpcf7-submit {
@@ -39,7 +39,7 @@ Contains:
           border-style: none;
           width: 100px;
           &:hover {
-            background-color: #19625d;
+            background-color: $hover__green;
           }
         }
       }

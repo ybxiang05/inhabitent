@@ -34,7 +34,7 @@
 
     & h3 {
       justify-content: flex-start;
-      color: #d99054;
+      color: $accent__orange;
       letter-spacing: 0.1rem;
       font-size: 1.25rem;
       margin-bottom: 0;
@@ -52,7 +52,7 @@
   .copyright {
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: $color__background-body;
     text-transform: uppercase;
     font-family: $font__code;
     padding-bottom: 2rem;

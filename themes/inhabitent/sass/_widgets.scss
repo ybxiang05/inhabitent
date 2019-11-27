@@ -8,14 +8,14 @@
     padding-left: 1.5rem;
     .widget-title {
       justify-content: left;
-      color: #2f1339;
+      color: $header__purple;
       font-weight: 600;
       letter-spacing: 0.13rem;
     }
     a {
-      color: #248a83;
+      color: $main__green;
       &:hover {
-        color: #2f1339;
+        color: $header__purple;
       }
     }
     ul {

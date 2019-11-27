@@ -47,10 +47,10 @@ Contains:
     margin: auto;
     padding-bottom: 3rem;
     width: $width;
-    border-bottom: 1px dashed #e1e1e1;
+    border-bottom: 1px dashed $border__grey;
     .menu-item a {
       text-decoration: none;
-      color: #248a83;
+      color: $main__green;
       text-transform: uppercase;
       font-size: 1.2rem;
       margin: 2rem;
@@ -84,8 +84,8 @@ Contains:
   margin: auto;
 
   .product-type-block-wrapper {
-    border: 1px solid #e1e1e1;
-    border-top: 5px solid #e1e1e1;
+    border: 1px solid $border__grey;
+    border-top: 5px solid $border__grey;
     display: flex;
     flex-flow: column nowrap;
     flex-basis: 25%;
@@ -94,8 +94,8 @@ Contains:
     position: relative;
 
     &:hover {
-      border: 1px solid #d99054;
-      border-top: 5px solid #d99054;
+      border: 1px solid $accent__orange;
+      border-top: 5px solid $accent__orange;
     }
     .product-type-icon {
       height: 75px;
@@ -154,7 +154,7 @@ Contains:
         display: block;
         .single-product-name {
           font-size: 2.5rem;
-          color: #d99054;
+          color: $accent__orange;
           justify-content: left;
           margin: 0;
           line-height: 2rem;

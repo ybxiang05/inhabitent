@@ -53,15 +53,15 @@ Contains:
 
       .single-entry-text a {
         .single-adventures-title {
-          color: #fff;
+          color: $color__background-body;
           font-family: $font__main;
           text-transform: none;
-          text-shadow: 1px 1px 1px #000;
+          text-shadow: 1px 1px 1px black;
           justify-content: flex-start;
           padding: 1rem;
           font-weight: 400;
           &:hover {
-            color: #f0e4d1;
+            color: $hover__yellow;
           }
         }
       }
@@ -70,12 +70,12 @@ Contains:
         bottom: 3rem;
         left: 1rem;
         color: white;
-        text-shadow: 1px 1px 1px #000;
+        text-shadow: 1px 1px 1px black;
         background: none;
-        border: 1px solid #fff;
+        border: 1px solid white;
         &:hover {
-          background-color: #248a83;
-          border: 1px solid #248a83;
+          background-color: $main__green;
+          border: 1px solid $main__green;
         }
       }
     }
@@ -94,7 +94,7 @@ Contains:
 .post-type-archive-adventures {
   .archive-adventure-title {
     padding: 2rem;
-    border-bottom: 1px dashed #e1e1e1;
+    border-bottom: 1px dashed $border__grey;
     width: $width;
     margin: auto;
   }
@@ -113,22 +113,22 @@ Contains:
           font-family: $font__main;
           text-transform: unset;
           font-size: 2.5rem;
-          text-shadow: 1px 1px 1px #000;
+          text-shadow: 1px 1px 1px black;
           font-weight: 400;
           width: $width;
-          color: white;
+          color: $color__background-body;
           &:hover {
-            color: #f0e4d1;
+            color: $hover__yellow;
           }
         }
         .btn-white {
           color: white;
-          text-shadow: 1px 1px 1px #000;
+          text-shadow: 1px 1px 1px black;
           background: none;
-          border: 2px solid #fff;
+          border: 2px solid white;
           &:hover {
-            background-color: #248a83;
-            border: 1px solid #248a83;
+            background-color: $main__green;
+            border: 1px solid $main__green;
           }
         }
       }

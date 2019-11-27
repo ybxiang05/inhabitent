@@ -11,8 +11,8 @@ Contains:
       display: none;
     }
     .search-field {
-      border: 1px solid #e1e1e1;
-      background-color: #f4f4f4;
+      border: 1px solid $border__grey;
+      background-color: $input__background;
       padding: 0.5rem;
       display: block;
       &:blur {
@@ -29,9 +29,9 @@ Contains:
       margin: 0;
     }
     a {
-      color: #248a83;
+      color: $main__green;
       &:hover {
-        color: #19625d;
+        color: $hover__green;
       }
     }
   }

@@ -10,7 +10,7 @@ Contains:
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-  border-bottom: 0.5px solid #e1e1e1;
+  border-bottom: 0.5px solid $border__grey;
   align-items: center;
   background-color: none;
   width: 100%;
@@ -19,7 +19,7 @@ Contains:
   height: 50px;
   position: fixed;
   z-index: 2;
-  background-color: rgba($color: #fff, $alpha: 0.75);
+  background-color: rgba($color: $color__background-body, $alpha: 0.75);
 
   a {
     margin-right: auto;
@@ -41,12 +41,12 @@ Contains:
     .menu-item a {
       margin-right: 15px;
       text-decoration: none;
-      color: #248a83;
+      color: $main__green;
       text-shadow: none;
       text-transform: uppercase;
       font-family: $font__code;
       &:hover {
-        color: #19625d;
+        color: $hover__green;
       }
     }
   }
@@ -59,9 +59,9 @@ Contains:
         display: block;
       }
       .fa-search {
-        color: #248a83;
+        color: $main__green;
         &:hover {
-          color: #19625d;
+          color: $hover__green;
         }
       }
 
@@ -71,7 +71,7 @@ Contains:
         background: none;
         border: 0;
         outline: none;
-        color: #666;
+        color: $color__border-abbr;
         display: none;
         text-transform: uppercase;
         &:blur {
@@ -88,38 +88,38 @@ Contains:
 .single-adventures {
   .main-navigation {
     border-bottom: none;
-    background-color: rgba($color: #fff, $alpha: 0);
+    background-color: rgba($color: $color__background-body, $alpha: 0);
     position: absolute;
     z-index: 1;
     display: flex;
     &.sticky {
       position: fixed;
       width: 100%;
-      background-color: rgba($color: #fff, $alpha: 0.75);
-      border-bottom: 1px solid #e1e1e1;
+      background-color: rgba($color: $color__background-body, $alpha: 0.75);
+      border-bottom: 1px solid $border__grey;
       .nav-menu {
         .menu-item a {
-          color: #248a83;
+          color: $main__green;
           text-shadow: none;
           &:hover {
-            color: #19625d;
+            color: $hover__green;
           }
         }
       }
       .search-form {
         .search-form-container {
           .fa-search {
-            color: #248a83;
+            color: $main__green;
             text-shadow: none;
             &:hover {
-              color: #19625d;
+              color: $hover__green;
             }
           }
           .search-field {
             font-family: $font__code;
 
             &::placeholder {
-              color: #666;
+              color: $color__border-abbr;
               text-shadow: none;
               font-family: $font__code;
             }
@@ -132,10 +132,10 @@ Contains:
         margin-right: 15px;
         text-decoration: none;
         text-transform: uppercase;
-        color: #fff;
-        text-shadow: 1px 1px 1px #000;
+        color: $color__background-body;
+        text-shadow: 1px 1px 1px black;
         &:hover {
-          color: #f0e4d1;
+          color: $hover__yellow;
         }
       }
     }
@@ -144,11 +144,11 @@ Contains:
         display: inline-block;
         background: none;
         .fa-search {
-          color: #fff;
-          text-shadow: 1px 1px 1px #000;
+          color: $color__background-body;
+          text-shadow: 1px 1px 1px black;
 
           &:hover {
-            color: #f0e4d1;
+            color: $hover__yellow;
           }
         }
         .search-field {
@@ -157,14 +157,14 @@ Contains:
           background: none;
           border: 0;
           outline: none;
-          color: #fff;
-          text-shadow: 1px 1px 1px #000;
+          color: $color__background-body;
+          text-shadow: 1px 1px 1px black;
           font-family: $font__code;
           display: none;
           text-transform: uppercase;
           &::placeholder {
-            color: #fff;
-            text-shadow: 1px 1px 1px #000;
+            color: $color__background-body;
+            text-shadow: 1px 1px 1px black;
             font-family: $font__code;
           }
         }
@@ -177,7 +177,7 @@ Contains:
 
 a.btn {
   color: white;
-  background-color: #248a83;
+  background-color: $main__green;
   text-transform: uppercase;
   font-family: $font__code;
   padding: 0.5rem;
@@ -187,12 +187,12 @@ a.btn {
   width: 170px;
   margin: auto;
   &:hover {
-    background-color: #19625d;
+    background-color: $hover__green;
   }
   &-white {
-    color: #2f1339;
+    color: $header__purple;
     background-color: white;
-    border: 1px solid #2f1339;
+    border: 1px solid $header__purple;
     text-transform: uppercase;
     font-family: $font__code;
     padding: 0.5rem;
@@ -203,9 +203,9 @@ a.btn {
     margin-left: 0;
     align-self: flex-start;
     &:hover {
-      background-color: #248a83;
+      background-color: $main__green;
       color: white;
-      border: 1px solid #248a83;
+      border: 1px solid $main__green;
     }
   }
 }

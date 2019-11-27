@@ -31,7 +31,7 @@ Contains:
         position: absolute;
         top: 20px;
         left: 0;
-        background: #248a83;
+        background: $main__green;
         padding: 10px;
         color: white;
         text-transform: uppercase;
@@ -40,7 +40,7 @@ Contains:
           color: white;
           text-decoration: none;
           &:hover {
-            color: #f0e4d1;
+            color: $hover__yellow;
           }
         }
       }
@@ -49,7 +49,7 @@ Contains:
         bottom: 7px;
         right: 0;
         color: white;
-        background: #248a83;
+        background: $main__green;
         padding: 5px;
         text-transform: uppercase;
       }
@@ -63,7 +63,7 @@ Contains:
 
   .widget-area {
     width: 27%;
-    border-left: 1px solid #e1e1e1;
+    border-left: 1px solid $border__grey;
     padding: 1rem;
   }
 }
