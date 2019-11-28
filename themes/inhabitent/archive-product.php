@@ -34,13 +34,13 @@ get_header(); ?>
 				
 			<?php /* Start the Loop */ ?>
 			<?php $arg_products = array(
-				'orderby' => array('title' =>'ASC'),
+				'order' => 'ASC',
 				'posts_per_page' => 12,
 				'post_type' => 'product');
 				
 				$products_entries = new WP_Query ($arg_products);?>
 
-			<?php while ( $products_entries->have_posts() ) : $products_entries->the_post(); ?>	
+			<?php while ( $products_entries->have_posts() ) :  $products_entries->the_post(); ?>	
 				<article id="post-<?php the_ID(); ?>" <?php post_class("product-item-wrapper"); ?>>
 				<div class="single-article-container">
 					<section class="entry-header single-article-image">
